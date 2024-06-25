@@ -1,0 +1,68 @@
+site_name: ""
+site_url: https://docs.sitesync.cloud
+theme:
+  name: material
+  logo: assets/SiteSyncLogo.png
+  favicon: assets/favicon.ico
+  features:
+    - header.autohide
+    - search.suggest
+    - search.highlight
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.expand
+    - navigation.path
+    - navigation.instant
+    - content.code.copy
+    - content.code.select
+    - content.tabs.link
+#    - toc.integrate
+#    - navigation.footer
+  palette:
+      primary: white
+plugins:
+  - search
+#  - social:
+##      cards_dir: cards/
+##      cards_layout_dir: layouts
+#      cards_layout_options:
+#        logo: assets/SiteSyncLogo.png
+nav:
+  - Overview:
+      - Architecture: about/architecture.md
+  - Installation:
+      - Ignition Gateway: installation/ignition.md
+      - SiteSync:
+          - Module: installation/sitesync/module.md
+          - Perspective: installation/sitesync/perspective.md
+  - LoRaWAN Module:
+      - QR Sync: lorawan-module/qr-sync.md
+      - Bulk Upload: lorawan-module/bulk-upload.md
+      - Decoders: lorawan-module/decoders.md
+      - UDTs: lorawan-module/udt.md
+      - Network Servers: lorawan-module/network-server.md
+  - Network Servers:
+      - Chirpstack: 1.md
+      - TTN: 1.md
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+extra:
+  generator: false
+extra_css:
+  - styles.css
