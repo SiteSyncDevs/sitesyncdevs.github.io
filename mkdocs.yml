@@ -40,10 +40,11 @@ nav:
       - Bulk Upload: lorawan-module/bulk-upload.md
       - Decoders: lorawan-module/decoders.md
       - UDTs: lorawan-module/udt.md
-      - Network Servers: lorawan-module/network-server.md
-  - Network Servers:
-      - Chirpstack: 1.md
-      - TTN: 1.md
+      - Downlinks: lorawan-module/downlinks.md
+      - Connections: lorawan-module/network-server.md
+  - FAQ:
+      - Howto: faq/howTo.md
+      - Troubleshooting: faq/troubleshooting.md
 markdown_extensions:
   - attr_list
   - pymdownx.emoji:
