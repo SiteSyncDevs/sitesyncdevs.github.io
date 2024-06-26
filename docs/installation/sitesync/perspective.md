@@ -1,4 +1,6 @@
-Instructions here to install SiteSync LoRaWAN module
+SiteSync's UI runs on Ignition's Perspective, which allows for reactive screens and the use of mobile applications.
+
+Instructions here to install SiteSync LoRaWAN module's UI
 
 1. From the Ignition Gateway GUI, navigate to `Config > Projects` using the navigation menu on the left
 ![Project Configuration](../../assets/projectconfiguration.png)

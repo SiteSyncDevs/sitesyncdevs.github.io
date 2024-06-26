@@ -35,6 +35,7 @@ nav:
       - SiteSync:
           - Module: installation/sitesync/module.md
           - Perspective: installation/sitesync/perspective.md
+      - Mobile App: installation/sitesync/perspectiveMobileApp.md
   - LoRaWAN Module:
       - QR Sync: lorawan-module/qr-sync.md
       - Bulk Upload: lorawan-module/bulk-upload.md

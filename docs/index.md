@@ -15,27 +15,26 @@ hide:
 -   :material-clock-fast:{ .lg .middle } __Overview__
 
     ---
-    Install [`mkdocs-material`](#) with [`pip`](#) and get up
-    and running in minutes
-    [:octicons-arrow-right-24: Getting started](#)
+    Get an overview of the architechure and LoRawan environment
+    [:octicons-arrow-right-24: Getting started](about/architecture/)
 
 -   :octicons-tools-16:{ .lg .middle } __Getting started__
 
     ---
-    Installation documentation
-    [:octicons-arrow-right-24: Reference](#)
+    Installation documentation for getting Ignition, the Perspective mobile app, and SiteSync installed in your environment.
+    [:octicons-arrow-right-24: Installation Reference](installation/ignition/)
 
 -   :material-frequently-asked-questions:{ .lg .middle } __FAQ__
 
     ---
-    Change the colors, fonts, language, icons, logo and more with a few lines
-    [:octicons-arrow-right-24: Customization](#)
+    View frequently asked questions and troubleshooting guides
+    [:octicons-arrow-right-24: FAQ](faq/howTo/)
 
--   :material-compare-horizontal:{ .lg .middle } __Compatability__
+-   :material-compare-horizontal:{ .lg .middle } __Configuring SiteSync__
 
     ---
-    Material for MkDocs is licensed under MIT and available on [GitHub]
+    SiteSync is a modular component that can plug into any architechture, get started by connecting to data.
 
-    [:octicons-arrow-right-24: License](#)
+    [:octicons-arrow-right-24: Configure for your Architecture](lorawan-module/network-server/)
 
 </div>
