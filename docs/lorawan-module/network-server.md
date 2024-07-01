@@ -45,8 +45,18 @@ hide:
     **Application ID**
 
     This is listed on the main page of your application:
+    ![chirp APP ID](../../assets/chirpstackAppID.png)
+
+    **Device Profile ID**
+
+    This is listed on the main page of your device profile:
+    ![Tchirp APP ID](../../assets/chirpstackAppID.png)
+
+    We reccomend making a generic device profile to start, and customizing as your needs grow.
 
     **API Token**
+
+    API Tokens are generated under the API Keys menu in Chirpstack.
 
 
 
@@ -100,11 +110,14 @@ hide:
 
     This can be generated under the Administration menu, select Service Accounts. Add a service account and give it the following permissions:
 
-    #permission table picture
 
     | Permission  ||
     |-------------||
-    | Devices, multicast groups, and connections manager| |
+    | Devices multicast groups, and connections manager| |
+
+
+    
+    ![ActilityService](../../assets/actilityServiceAccount.png)
 
 
 
@@ -125,7 +138,7 @@ hide:
 
     To set up an MQTT output from TTN, select your application, navigate to Integrations, and select MQTT. 
     
-    # integration picture here
+    ![TTN MQTT Integration](../../assets/TTNMQTTIntegration.png)
 
     The MQTT integration will have the following fields to copy into SiteSync to create the MQTT connection.
 
@@ -159,12 +172,13 @@ hide:
     **Application ID**
 
     This is listed on the main page of your application:
+    ![TTN APP ID](../../assets/ttnAppID.png)
 
     **API Token**
 
     On your selected application, create an API key with the following permissions:
-    
-    ## api permission picture
+  
+  
 
 
     | Permission  |
@@ -174,6 +188,8 @@ hide:
     | Create Devices                |
     | Edit device keys              | 
     | Write downlink application traffic | 
+
+       ![TTNAPIRIGHTS](../../assets/TTNAPIRights.png)
 
 
 
@@ -244,7 +260,7 @@ hide:
 
     This is listed on the main page of your Application
 
-    #connection id picture
+      ![loriot APP ID](../../assets/loriotAPPID.png)
 
 
 
