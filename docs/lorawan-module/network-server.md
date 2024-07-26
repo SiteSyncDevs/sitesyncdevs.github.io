@@ -100,13 +100,15 @@ hide:
 
     **Application ID**
 
-    This is listed on the main page of your Connection:
+    This is listed on the main page of your Connection under ID:
 
-    #connection id picture
+    ![ActilityConnectionID](../../assets/thingparkConnectionID.png)
 
-    Use the full string of the ConnectionID where you want to sync devices into.
+    Use the full string of the ID where you want to sync devices into.
 
     **Service Account**
+
+    To sync devices into Actility, a service account must be made for SiteSync to access ThingPark.
 
     This can be generated under the Administration menu, select Service Accounts. Add a service account and give it the following permissions:
 
