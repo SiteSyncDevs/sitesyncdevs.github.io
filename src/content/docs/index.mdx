@@ -1,0 +1,52 @@
+---
+title: SiteSync Documentation
+description: Install, configure, and operate SiteSync — the LoRaWAN network server and device platform for Ignition.
+template: splash
+hero:
+  tagline: Onboard, diagnose, model, and process IIoT data. SiteSync turns LoRaWAN traffic into structured Ignition tags — no custom scripting required.
+  actions:
+    - text: What is SiteSync?
+      link: /getting-started/what-is-sitesync/
+      icon: right-arrow
+    - text: Product comparison
+      link: /getting-started/product-comparison/
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
+
+:::tip[Current release]
+SiteSync **1.0.0** is the current release. See the [1.0.0 release notes](/release-notes/1-0-0/) for what changed and required deployment actions.
+:::
+
+<CardGrid>
+  <Card title="I'm a Site or Field User" icon="approve-check">
+    Access the Field App, onboard devices, inspect data, and diagnose issues in the field.
+
+    <LinkButton href="/getting-started/quick-start-field-app/" variant="secondary" icon="right-arrow">
+      Field App quick start
+    </LinkButton>
+  </Card>
+  <Card title="I'm an Enterprise User" icon="setting">
+    Install Enterprise, configure connections, create sites, define device profiles, and monitor the fleet.
+
+    <LinkButton href="/getting-started/quick-start-enterprise/" variant="secondary" icon="right-arrow">
+      Enterprise quick start
+    </LinkButton>
+  </Card>
+  <Card title="I use SiteSync Standard" icon="rocket">
+    Install and configure a standalone SiteSync deployment on a single Ignition gateway.
+
+    <LinkButton href="/getting-started/quick-start-standard/" variant="secondary" icon="right-arrow">
+      Standard quick start
+    </LinkButton>
+  </Card>
+</CardGrid>
+
+## Popular tasks
+
+- [Configure a network-server connection](/configure/connections/add-a-connection/)
+- [Create a site](/configure/sites/create-a-site/)
+- [Add a device](/use/add-device/add-manually/)
+- [Diagnose a device that is not reporting](/troubleshoot/device-problems/added-not-reporting/)
+- [Understand health metrics](/reference/health-metrics/)

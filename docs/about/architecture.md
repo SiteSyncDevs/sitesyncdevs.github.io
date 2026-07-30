@@ -1,2 +1,0 @@
-
-Sample Architechture with SiteSync
