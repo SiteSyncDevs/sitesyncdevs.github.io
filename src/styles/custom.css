@@ -1,0 +1,307 @@
+/* =============================================================
+   SiteSync brand theme for Starlight
+   Palette:
+     Stormy Teal  #0D5C63
+     Dark Teal    #0A4A50
+     Strong Cyan  #18C7B8
+     White        #FFFFFF
+   ============================================================= */
+
+/* ---------- Shared ---------- */
+:root {
+  /* Keep line lengths readable, the way the reference docs do */
+  --sl-content-width: 50rem;
+}
+
+/* ---------- Dark mode (default) ----------
+   Surface colors must live here — not only accents. Unlayered custom CSS
+   beats Starlight’s @layer light-theme rules, so dark surfaces set on :root
+   permanently block light/auto unless light mode redefines them below. */
+:root,
+:root[data-theme='dark'] {
+  /* Accent — links, active nav item, buttons, focus rings */
+  --sl-color-accent-low: #0a3a3d;
+  --sl-color-accent: #18c7b8;
+  --sl-color-accent-high: #8ee9df;
+
+  /* Branded dark surfaces built around the teal palette */
+  --sl-color-bg: #061a1d;            /* main content background */
+  --sl-color-bg-nav: #0a2e33;        /* top header bar */
+  --sl-color-bg-sidebar: #08252a;    /* left sidebar */
+  --sl-color-bg-inline-code: #0e3a40;
+  --sl-color-hairline-shade: #0d5c6340;
+  --sl-color-hairline: #0d5c6355;
+}
+
+/* ---------- Light mode ---------- */
+:root[data-theme='light'] {
+  --sl-color-accent-low: #c7f0eb;
+  --sl-color-accent: #0d8a80;
+  --sl-color-accent-high: #0a4a50;
+
+  /* Branded light surfaces — required so the theme toggle actually switches */
+  --sl-color-bg: #f7fbfb;
+  --sl-color-bg-nav: #eef6f6;
+  --sl-color-bg-sidebar: #f7fbfb;
+  --sl-color-bg-inline-code: #e3f5f2;
+  --sl-color-hairline-shade: #0a4a5022;
+  --sl-color-hairline: #0a4a5033;
+}
+
+/* ---------- Header branding ---------- */
+.site-title img {
+  max-height: 2.4rem;
+  width: auto;
+}
+/* Logo text is a muted teal — brighten slightly on dark surfaces */
+:root[data-theme='dark'] .site-title img,
+:root:not([data-theme='light']) .site-title img {
+  filter: brightness(1.25) saturate(1.1);
+}
+
+/* ---------- Headings rhythm ---------- */
+.sl-markdown-content :is(h2, h3, h4) {
+  margin-top: 1.6em;
+}
+.sl-markdown-content h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+/* ---------- Inline code / monospace ---------- */
+.sl-markdown-content code:not(:where(.expressive-code *)) {
+  font-size: 0.875em;
+  padding: 0.15em 0.4em;
+  border-radius: 0.35rem;
+  border: 1px solid var(--sl-color-hairline);
+  color: var(--sl-color-accent-high);
+}
+:root[data-theme='light'] .sl-markdown-content code:not(:where(.expressive-code *)) {
+  color: var(--sl-color-accent-high);
+}
+
+/* ---------- Tables (match the reference's clean data tables) ---------- */
+.sl-markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin-block: 1.25rem;
+}
+.sl-markdown-content :is(th, td) {
+  border: 1px solid var(--sl-color-hairline);
+  padding: 0.55rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+}
+.sl-markdown-content th {
+  background: var(--sl-color-accent-low);
+  color: var(--sl-color-white);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.sl-markdown-content tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--sl-color-accent-low) 22%, transparent);
+}
+
+/* ---------- Links in body copy ---------- */
+.sl-markdown-content a {
+  text-underline-offset: 0.2em;
+}
+
+/* ---------- Splash hero: soft branded glow ----------
+   A blurred accent blob fades to true transparency. Avoid color-mix(...
+   transparent) in srgb — that mixes toward black and leaves hard edges. */
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: min(36rem, 70%);
+  height: min(22rem, 85%);
+  left: 0;
+  top: 50%;
+  translate: 0 -50%;
+  border-radius: 50%;
+  background: var(--sl-color-accent);
+  opacity: 0.18;
+  filter: blur(72px);
+  pointer-events: none;
+}
+.hero .actions a[data-variant='primary'] {
+  background: var(--sl-color-accent);
+  border-color: var(--sl-color-accent);
+  color: #04262a;
+}
+
+/* ---------- Homepage audience cards: 3-up row + aligned CTAs ---------- */
+.card-grid {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 50rem) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+.card-grid > .card {
+  height: 100%;
+}
+.card-grid .card .title {
+  flex-wrap: wrap;
+  font-size: var(--sl-text-lg);
+}
+.card-grid .card .body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+}
+.card-grid .card .body > .sl-link-button {
+  margin-block: 0;
+  margin-inline-end: 0;
+  margin-top: auto;
+  align-self: stretch;
+  justify-content: center;
+  border-color: var(--sl-color-accent);
+  color: var(--sl-color-accent-high);
+  border-radius: 0.4rem;
+  font-size: var(--sl-text-sm);
+  padding: 0.5rem 0.75rem;
+}
+.card-grid .card .body > .sl-link-button:hover {
+  background: var(--sl-color-accent);
+  border-color: var(--sl-color-accent);
+  color: #04262a;
+}
+:root[data-theme='light'] .card-grid .card .body > .sl-link-button:hover {
+  color: #fff;
+}
+
+/* ---------- Applicability banner (auto-rendered under the title) ---------- */
+.ss-applies {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.75rem;
+  margin: 0.4rem 0 1.4rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--sl-color-hairline);
+  border-left: 3px solid var(--sl-color-accent);
+  border-radius: 0.4rem;
+  background: color-mix(in srgb, var(--sl-color-accent-low) 30%, transparent);
+  font-size: 0.8125rem;
+}
+.ss-applies__label {
+  font-weight: 600;
+  color: var(--sl-color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.72rem;
+}
+.ss-applies__pills { display: inline-flex; flex-wrap: wrap; gap: 0.35rem; }
+.ss-applies__meta { color: var(--sl-color-gray-3); }
+.ss-pill {
+  display: inline-block;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--sl-color-accent);
+  color: var(--sl-color-accent-high);
+  background: color-mix(in srgb, var(--sl-color-accent) 12%, transparent);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+.ss-pill--status {
+  border-color: #b98900;
+  color: #f0c674;
+  background: #b9890022;
+  text-transform: capitalize;
+}
+
+/* ---------- Per-page feedback control ---------- */
+.ss-feedback {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin-top: 2.5rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+}
+.ss-feedback__q { font-weight: 600; color: var(--sl-color-white); }
+.ss-feedback__actions { display: inline-flex; gap: 0.4rem; }
+.ss-feedback__actions button {
+  cursor: pointer;
+  padding: 0.2rem 0.9rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--sl-color-accent);
+  background: transparent;
+  color: var(--sl-color-accent-high);
+  font: inherit;
+}
+.ss-feedback__actions button:hover {
+  background: var(--sl-color-accent);
+  color: #04262a;
+}
+.ss-feedback__report { font-size: 0.8125rem; }
+.ss-feedback__meta { margin-left: auto; color: var(--sl-color-gray-3); font-size: 0.8rem; }
+
+/* ---------- Screenshot placeholders ---------- */
+figure.ss-shot {
+  margin: 1.25rem 0;
+  padding: 1.25rem;
+  border: 2px dashed var(--sl-color-accent);
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--sl-color-accent-low) 18%, transparent);
+  text-align: center;
+}
+figure.ss-shot::before {
+  content: "Screenshot needed — " attr(data-shot-id);
+  display: block;
+  font-weight: 600;
+  color: var(--sl-color-accent-high);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.35rem;
+}
+figure.ss-shot figcaption {
+  color: var(--sl-color-gray-2);
+  font-size: 0.85rem;
+}
+figure.ss-shot[data-viewport]::after {
+  content: attr(data-viewport) " · " attr(data-product);
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  color: var(--sl-color-gray-3);
+  text-transform: capitalize;
+}
+
+/* ---------- Resolved screenshots ---------- */
+figure.ss-figure { margin: 1.25rem 0; }
+figure.ss-figure img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 0.5rem;
+}
+figure.ss-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--sl-color-gray-3);
+  text-align: center;
+}
+
+/* ---------- Bottom prev/next page navigators ---------- */
+.pagination-links a {
+  font-size: var(--sl-text-sm);
+  padding: 0.85rem;
+}
+.pagination-links .link-title {
+  font-size: var(--sl-text-lg);
+}

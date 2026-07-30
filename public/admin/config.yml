@@ -1,0 +1,1297 @@
+# SiteSync Docs — CMS configuration (Sveltia / Decap compatible)
+# One folder collection per section directory. Toggle "Draft" to hide a page
+# from the published site (it stays visible locally and here in the CMS).
+
+backend:
+  name: github
+  repo: sitesyncdevs/sitesyncdevs.github.io
+  branch: main
+
+local_backend: true
+
+media_folder: public/screenshots
+public_folder: /screenshots
+
+editor:
+  preview: true
+
+collections:
+  - name: getting-started
+    label: "Getting started"
+    label_singular: Page
+    folder: src/content/docs/getting-started
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: products-enterprise
+    label: "Products / Enterprise"
+    label_singular: Page
+    folder: src/content/docs/products/enterprise
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: products-enterprise-management
+    label: "Products / Enterprise Management"
+    label_singular: Page
+    folder: src/content/docs/products/enterprise-management
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: products-field-app
+    label: "Products / Field App"
+    label_singular: Page
+    folder: src/content/docs/products/field-app
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: products-standard
+    label: "Products / Standard"
+    label_singular: Page
+    folder: src/content/docs/products/standard
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: install-upgrade
+    label: "Install upgrade"
+    label_singular: Page
+    folder: src/content/docs/install-upgrade
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: install-upgrade-enterprise
+    label: "Install upgrade / Enterprise"
+    label_singular: Page
+    folder: src/content/docs/install-upgrade/enterprise
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: install-upgrade-standard
+    label: "Install upgrade / Standard"
+    label_singular: Page
+    folder: src/content/docs/install-upgrade/standard
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: install-upgrade-upgrade
+    label: "Install upgrade / Upgrade SiteSync"
+    label_singular: Page
+    folder: src/content/docs/install-upgrade/upgrade
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: configure
+    label: "Configure"
+    label_singular: Page
+    folder: src/content/docs/configure
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: configure-connections
+    label: "Configure / Connections"
+    label_singular: Page
+    folder: src/content/docs/configure/connections
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: configure-decoders
+    label: "Configure / Decoders"
+    label_singular: Page
+    folder: src/content/docs/configure/decoders
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: configure-device-profiles
+    label: "Configure / Device profiles"
+    label_singular: Page
+    folder: src/content/docs/configure/device-profiles
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: configure-downlinks
+    label: "Configure / Downlinks"
+    label_singular: Page
+    folder: src/content/docs/configure/downlinks
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: configure-identity-access
+    label: "Configure / Identity and access"
+    label_singular: Page
+    folder: src/content/docs/configure/identity-access
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: configure-network-servers
+    label: "Configure / Network servers"
+    label_singular: Page
+    folder: src/content/docs/configure/network-servers
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: configure-sites
+    label: "Configure / Sites"
+    label_singular: Page
+    folder: src/content/docs/configure/sites
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: configure-udts-and-tags
+    label: "Configure / UDTs and tags"
+    label_singular: Page
+    folder: src/content/docs/configure/udts-and-tags
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: use
+    label: "Use"
+    label_singular: Page
+    folder: src/content/docs/use
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: use-add-device
+    label: "Use / Add device"
+    label_singular: Page
+    folder: src/content/docs/use/add-device
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: use-bulk-upload
+    label: "Use / Bulk upload"
+    label_singular: Page
+    folder: src/content/docs/use/bulk-upload
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: use-field-app
+    label: "Use / Field App"
+    label_singular: Page
+    folder: src/content/docs/use/field-app
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: troubleshoot
+    label: "Troubleshoot"
+    label_singular: Page
+    folder: src/content/docs/troubleshoot
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: troubleshoot-connection-problems
+    label: "Troubleshoot / Connection problems"
+    label_singular: Page
+    folder: src/content/docs/troubleshoot/connection-problems
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: troubleshoot-device-problems
+    label: "Troubleshoot / Device problems"
+    label_singular: Page
+    folder: src/content/docs/troubleshoot/device-problems
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: troubleshoot-downlink-problems
+    label: "Troubleshoot / Downlink problems"
+    label_singular: Page
+    folder: src/content/docs/troubleshoot/downlink-problems
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: troubleshoot-onboarding-problems
+    label: "Troubleshoot / Onboarding problems"
+    label_singular: Page
+    folder: src/content/docs/troubleshoot/onboarding-problems
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: reference
+    label: "Reference"
+    label_singular: Page
+    folder: src/content/docs/reference
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: reference-api
+    label: "Reference / API"
+    label_singular: Page
+    folder: src/content/docs/reference/api
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: reference-security
+    label: "Reference / Security"
+    label_singular: Page
+    folder: src/content/docs/reference/security
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: release-notes
+    label: "Release notes"
+    label_singular: Page
+    folder: src/content/docs/release-notes
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
+  - name: support
+    label: "Support"
+    label_singular: Page
+    folder: src/content/docs/support
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }

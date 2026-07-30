@@ -1,0 +1,39 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+
+const route = Astro.locals.starlightRoute;
+const data = route?.entry?.data ?? {};
+// lastReviewed may be a string or a Date (CMS date picker) — normalize to YYYY-MM-DD.
+const reviewed =
+  data.lastReviewed instanceof Date
+    ? data.lastReviewed.toISOString().slice(0, 10)
+    : data.lastReviewed;
+const title = route?.entry?.data?.title ?? '';
+const reportHref =
+  'mailto:support@sitesync.cloud?subject=' +
+  encodeURIComponent('Docs feedback: ' + title);
+---
+
+<div class="ss-feedback" data-ss-feedback>
+  <span class="ss-feedback__q">Was this page helpful?</span>
+  <span class="ss-feedback__actions">
+    <button type="button" data-val="yes">Yes</button>
+    <button type="button" data-val="no">No</button>
+  </span>
+  <a class="ss-feedback__report" href={reportHref}>Report incorrect documentation</a>
+  {reviewed && <span class="ss-feedback__meta">Last reviewed {reviewed}</span>}
+</div>
+
+<Default />
+
+<script>
+  document.querySelectorAll('[data-ss-feedback]').forEach((el) => {
+    el.querySelectorAll('button').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const q = el.querySelector('.ss-feedback__q');
+        if (q) q.textContent = 'Thanks for your feedback.';
+        el.querySelector('.ss-feedback__actions')?.remove();
+      });
+    });
+  });
+</script>
