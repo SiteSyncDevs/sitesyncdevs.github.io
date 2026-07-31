@@ -24,7 +24,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -64,7 +64,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -104,7 +104,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -144,7 +144,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -184,7 +184,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -224,7 +224,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -264,7 +264,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -304,7 +304,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -344,7 +344,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -384,7 +384,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -424,7 +424,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -464,7 +464,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -504,7 +504,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -544,7 +544,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -584,7 +584,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -624,7 +624,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -664,7 +664,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -704,7 +704,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -744,7 +744,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -784,7 +784,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -824,7 +824,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -864,7 +864,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -904,7 +904,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -944,7 +944,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -984,7 +984,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -1024,7 +1024,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -1064,7 +1064,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -1104,7 +1104,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -1144,7 +1144,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -1184,7 +1184,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -1224,7 +1224,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
@@ -1264,7 +1264,7 @@ collections:
     format: frontmatter
     create: true
     identifier_field: title
-    summary: "{{title}}{{#if fields.draft}}  ·  DRAFT{{/if}}"
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
     fields:
       - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
       - { name: title, label: Title, widget: string }
