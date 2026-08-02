@@ -1,11 +1,14 @@
 ---
-title: "Configure identity and roles"
-description: "Set up the administrator and general roles in your identity provider."
-products: ["enterprise-management"]
-roles: ["administrator"]
-introduced: "1.0.0"
-contentType: "task"
-lastReviewed: "2026-07-30"
+title: Configure identity and roles
+description: Set up the administrator and general roles in your identity provider.
+products:
+  - enterprise-management
+roles:
+  - administrator
+introduced: 1.0.0
+contentType: task
+lastReviewed: 2026-07-30
+owner: ''
 ---
 
 SiteSync Enterprise uses your Ignition **Identity Provider** to separate who manages the platform from who uses the Field App.
@@ -21,7 +24,7 @@ SiteSync Enterprise uses your Ignition **Identity Provider** to separate who man
 
 1. In your Identity Provider, create (or confirm) the **administrator** and **general** roles.
 2. Assign users to the appropriate role.
-3. Apply those roles to the SiteSync Perspective projects: in each project's **security settings**, restrict access so only the intended role can open it (for example, limit Enterprise Management to the **administrator** role). See Ignition's [Project Security & Permissions](https://docs.inductiveautomation.com/docs/8.1/platform/security/project-security) documentation for how to set project-level role permissions.
+3. Apply those roles to the SiteSync Perspective projects: in each project's **security settings**, restrict access so only the intended role can open it (for example, limit Enterprise Management to the **administrator** role). See Ignition's [Project Security & Permissions](https://www.docs.inductiveautomation.com/docs/8.1/platform/security) documentation for how to set project-level role permissions.
 4. Confirm an administrator can open Enterprise Management and a general user can sign in to the Field App.
 
 :::tip[Automate site selection]
