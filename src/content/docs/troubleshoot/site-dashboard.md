@@ -8,7 +8,7 @@ contentType: "reference"
 lastReviewed: "2026-07-30"
 ---
 
-Selecting a site card from the [fleet dashboard](/troubleshoot/fleet-dashboard/) opens the site view — the same structure, scoped to that site's devices.
+Selecting a site card from the fleet dashboard opens the site view — the same structure, scoped to that site's devices.
 
 ## What it shows
 
@@ -24,5 +24,5 @@ If every device at a site is offline at once, suspect a network or gateway issue
 
 ## Related pages
 
-- [Fleet dashboard](/troubleshoot/fleet-dashboard/)
+- Fleet dashboard
 - [Device diagnostics workflow](/troubleshoot/device-diagnostics/)

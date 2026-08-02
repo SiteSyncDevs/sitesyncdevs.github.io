@@ -8,7 +8,7 @@ contentType: "integration"
 lastReviewed: "2026-07-30"
 ---
 
-LORIOT is a Swiss LoRaWAN network server provider, available as a hosted service or on-premises. The values below are based on the USPRO edition.
+LORIOT is a LoRaWAN network server provider, available as a hosted service or on-premises. The values below are based on the USPRO edition.
 
 ## MQTT connection
 
@@ -31,6 +31,10 @@ To ingest from several applications on this broker, put multiple topics in the M
 | URL | The URL of your LORIOT instance. |
 | Application ID | The LORIOT application to sync devices into. Found on the application's main page. |
 | API Token | Generated in LORIOT under **Account → API Keys**. |
+
+:::note[Sending downlinks needs a second token]
+To send downlinks, LORIOT requires an additional API token appended to the first, separated by a semicolon (`;`). Exact token setup details are being finalized — check with SiteSync if you are configuring downlinks on LORIOT.
+:::
 
 ## Related pages
 

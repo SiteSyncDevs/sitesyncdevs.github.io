@@ -12,6 +12,16 @@ lastReviewed: 2026-07-30
 owner: ''
 ---
 
-Contact the SiteSync support team with a completed [diagnostic package](/support/collect-diagnostic-package/).
+When you contact support, include a completed [diagnostic package](/support/collect-diagnostic-package/) so the team can help you faster.
 
-Add the official support contact [support@sitesync.cloud](mailto:support@sitesync.cloud "mailto:support@sitesync.cloud") and any SLA/hours.
+## How to reach us
+
+| Channel | Details |
+| --- | --- |
+| Email | [support@sitesync.cloud](mailto:support@sitesync.cloud) |
+| Support hours | *(hours to be confirmed)* |
+| Emergency phone | *(emergency number to be confirmed)* — for urgent, production-down issues |
+
+:::tip[Before you reach out]
+Attach your [diagnostic package](/support/collect-diagnostic-package/) and note your SiteSync version and network server so support has the context to respond quickly.
+:::

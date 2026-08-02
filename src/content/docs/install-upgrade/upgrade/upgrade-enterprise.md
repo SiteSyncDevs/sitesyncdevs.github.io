@@ -16,7 +16,7 @@ Upgrade a SiteSync Enterprise deployment to a newer version.
 
 :::note[Prerequisites]
 - Read the [target release notes](/release-notes/1-0-0/) for required actions — including any UDTs to re-import or non-standard upgrade steps. **1.0.0 requires re-importing all three projects.**
-- [Back up the gateway](/install-upgrade/upgrade/back-up/).
+- Back up the gateway.
 - Have the new Enterprise module `.modl` and the new **SiteSync Source**, **Enterprise Management**, and **Field App** project files.
 :::
 

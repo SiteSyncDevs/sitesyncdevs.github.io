@@ -15,10 +15,10 @@ Enterprise Management is the central app administrators use to run SiteSync acro
 - [Sites](/configure/sites/understand-sites/)
 - [Connections](/configure/connections/concepts/) (MQTT + LNS API)
 - [Device profiles](/configure/device-profiles/concepts/) and [decoders](/configure/decoders/concepts/)
-- [UDT and tag-path](/configure/udts-and-tags/tag-model/) configuration
-- Fleet-level [devices](/use/find-and-open-device/) and [diagnostics](/troubleshoot/fleet-dashboard/)
+- UDT and tag-path configuration
+- Fleet-level [devices](/use/find-and-open-device/) and diagnostics
 
 ## Related pages
 
-- [Interface tour](/products/enterprise-management/interface-tour/)
+- Interface tour
 - [Enterprise admin quick start](/getting-started/quick-start-enterprise/)

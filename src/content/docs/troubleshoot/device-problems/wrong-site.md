@@ -16,11 +16,13 @@ The device exists but is attached to the wrong site — commonly after a bulk up
 
 Transfer the device to the correct site from the Enterprise Management app. Devices sitting in a default site can be moved from there.
 
-:::note[Confirm exact steps]
-Confirm the precise move-between-sites control (device edit page vs. bulk action). See the open questions.
+You can also **re-run a bulk upload** from Enterprise Management with the correct site to reassign the affected devices.
+
+:::caution[Old tags persist]
+Moving a device to a different site creates its tags in the new site's folder, but the device's **original tags remain in their first location**. Clean up the old folder if needed.
 :::
 
 ## Related pages
 
-- [Edit a device](/use/edit-device/)
+- Edit a device
 - [Understand sites](/configure/sites/understand-sites/)

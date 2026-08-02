@@ -43,7 +43,15 @@ The exact broker address, port, and topic depend on your network server. Pick yo
 - [Actility ThingPark](/configure/network-servers/actility-thingpark/)
 - [The Things Stack (TTN/TTS/TTI)](/configure/network-servers/the-things-stack/)
 - [Loriot](/configure/network-servers/loriot/)
-- [Other or custom (incl. Multitech Conduit)](/configure/network-servers/other/)
+- [Multitech Conduit](/configure/network-servers/multitech/)
+
+## Common issues
+
+- **No data arriving:** confirm the broker URL and port, and that the Ignition gateway can reach the broker through your firewall (typically `1883`, or `8883` for TLS). The MQTT status is polled every 30 seconds — check [Connection health](/configure/connections/health/).
+- **Connected but no values:** the topic pattern may not match your application, or the device still needs a decoder — see [Decode error](/troubleshoot/device-problems/decode-error/).
+- **Auth rejected:** re-check the MQTT username and password; some brokers require authentication.
+
+For deeper help, see [MQTT disconnected](/troubleshoot/connection-problems/mqtt-disconnected/).
 
 ## Related pages
 

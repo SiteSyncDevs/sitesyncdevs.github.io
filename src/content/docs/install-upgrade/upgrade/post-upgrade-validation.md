@@ -23,9 +23,9 @@ Confirm the upgrade succeeded and the deployment is healthy.
 
 ## If something's wrong
 
-Roll back using your gateway backup — see [Uninstall or roll back](/install-upgrade/uninstall-rollback/).
+Roll back using your gateway backup — see Uninstall or roll back.
 
 ## Related pages
 
 - [Upgrade Enterprise](/install-upgrade/upgrade/upgrade-enterprise/)
-- [Back up SiteSync](/install-upgrade/upgrade/back-up/)
+- Back up SiteSync

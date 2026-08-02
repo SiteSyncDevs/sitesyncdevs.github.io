@@ -1,5 +1,5 @@
 ---
-title: "Configure tag paths"
+title: "Configure Display Values"
 description: "Set the Primary Value and Display Values that SiteSync surfaces from a decoded payload."
 products: ["standard", "enterprise-management"]
 roles: ["administrator"]
@@ -14,8 +14,8 @@ Choose which decoded fields SiteSync surfaces as the headline and secondary valu
 
 ## Before you begin
 
-:::note[Prerequisite]
-A UDT must be selected **and saved** on the profile before you can pick a Primary Value or Display Values.
+:::note[Display Values live on the UDT]
+Display Values are configured on the **UDT**, not on the profile form directly — the fields you want to surface must exist in the UDT's designated Display Values folder. Select **and save** the UDT on the profile before you can pick a Primary Value or Display Values.
 :::
 
 ## Primary Value
@@ -29,4 +29,4 @@ A comma-separated list of additional payload fields to show on the device values
 ## Related pages
 
 - [Profile fields](/configure/device-profiles/fields/)
-- [SiteSync tag model](/configure/udts-and-tags/tag-model/)
+- SiteSync tag model

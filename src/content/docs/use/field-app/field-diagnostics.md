@@ -21,4 +21,4 @@ lastReviewed: "2026-07-30"
 ## Related pages
 
 - [Device diagnostics workflow](/troubleshoot/device-diagnostics/)
-- [Device added but not reporting](/troubleshoot/device-problems/added-not-reporting/)
+- [Device added but not reporting](/troubleshoot/onboarding-problems/added-not-reporting/)

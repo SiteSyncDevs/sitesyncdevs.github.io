@@ -26,7 +26,7 @@ SiteSync stores connection credentials in encrypted form locally.
 ## How many connections?
 
 - **SiteSync Standard** supports a **single connection**.
-- **Enterprise Management** supports **multiple connections** — for example, provisioning devices through your main LNS while ingesting data from an additional broker (such as an Aloxy broker). One of them is the [primary connection](/configure/connections/primary-connection/), used to add devices to the network server.
+- **Enterprise Management** supports **multiple connections** — for example, provisioning devices through your main LNS while ingesting data from an additional broker (a separate broker feeding another data source). One of them is the primary connection, used to add devices to the network server.
 
 :::note[One broker, many topics]
 Multiple connections is different from multiple **topics**. A single broker connection can subscribe to several MQTT topics at once — see [Configure MQTT](/configure/connections/configure-mqtt/#multiple-topics-on-one-broker).

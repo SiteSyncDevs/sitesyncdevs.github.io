@@ -25,6 +25,10 @@ Connect SiteSync to your LoRa Network Server so device data flows in (MQTT) and 
 - Have your LNS API endpoint, application ID, and an API token or service-account credentials with the required permissions.
 :::
 
+:::note[Open firewall access from the Ignition gateway]
+Connections are initiated **outbound from the Ignition gateway**, so make sure the gateway can reach your broker and network-server API through the firewall. Ports depend on your setup — typical ports are `1883` and `8883` (MQTT) and `8090` (network-server API). The MQTT connection status is tracked in a managed Ignition tag and updates in real time — see [Connection health](/configure/connections/health/).
+:::
+
 ## Steps
 
 1. In the left sidebar, select **Connections**.
@@ -62,7 +66,7 @@ Ingesting from two ChirpStack applications on the **same broker**? Use one conne
 application/1/device/+/event/up;application/2/device/+/event/up
 ```
 
-See [ChirpStack](/configure/network-servers/chirpstack/) for where each value comes from, and [Configure MQTT](/configure/connections/configure-mqtt/#multiple-topics-on-one-broker) for multi-topic details.
+See ChirpStack for where each value comes from, and [Configure MQTT](/configure/connections/configure-mqtt/#multiple-topics-on-one-broker) for multi-topic details.
 
 ## Expected result
 

@@ -14,7 +14,7 @@ lastReviewed: "2026-07-30"
 2. **SiteSync Source**, **Enterprise Management**, and **Field App** projects load without errors.
 3. An **administrator** can open Enterprise Management; a **general** user can sign in to the Field App and see their site.
 4. Each [connection](/configure/connections/health/) shows **Active**.
-5. The Enterprise and site [dashboards](/troubleshoot/fleet-dashboard/) load (including with no devices).
+5. The Enterprise and site dashboards load (including with no devices).
 6. A test device onboarded to a site reports values and updates **Last Seen**.
 
 ## Related pages

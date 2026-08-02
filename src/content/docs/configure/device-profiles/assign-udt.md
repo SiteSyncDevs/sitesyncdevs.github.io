@@ -24,5 +24,5 @@ If no UDT is selected, **adding devices fails** for this profile.
 
 ## Related pages
 
-- [UDT requirements](/configure/udts-and-tags/udt-requirements/)
+- UDT requirements
 - [Configure tag paths](/configure/device-profiles/tag-paths/)

@@ -29,5 +29,5 @@ Renaming updates the display name across SiteSync without affecting the Dev EUI,
 
 ## Related pages
 
-- [Edit a device](/use/edit-device/)
+- Edit a device
 - [The device page](/use/device-page/)

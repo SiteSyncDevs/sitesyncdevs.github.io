@@ -38,4 +38,4 @@ LoRa Network Server (LNS)
 ## Related pages
 
 - [What is SiteSync?](/getting-started/what-is-sitesync/)
-- [SiteSync tag model](/configure/udts-and-tags/tag-model/)
+- SiteSync tag model

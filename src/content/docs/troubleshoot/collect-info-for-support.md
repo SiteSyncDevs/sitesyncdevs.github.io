@@ -25,7 +25,7 @@ Gathering this up front resolves most cases faster.
 
 ## Where to find versions
 
-- [Find your SiteSync version](/support/find-sitesync-version/)
+- Find your SiteSync version
 - [Find your Ignition version](/support/find-ignition-version/)
 
 ## Related pages

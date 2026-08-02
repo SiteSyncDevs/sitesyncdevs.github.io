@@ -14,14 +14,14 @@ owner: ''
 
 Include as much of this as you can — it resolves most cases faster:
 
-- [SiteSync version](/support/find-sitesync-version/) and [Ignition version](/support/find-ignition-version/).
+- SiteSync version and [Ignition version](/support/find-ignition-version/).
 - Product and application (Standard, Enterprise Management, or Field App) and browser / Perspective mobile version.
 - Network-server type and version.
 - Device profile, device manufacturer, and firmware.
 - **DevEUI** (partially redacted where appropriate).
 - Timestamp and timezone of the issue.
 - Exact steps to reproduce, expected result, and actual result.
-- Screenshots and relevant [Gateway logs](/support/export-logs/).
+- Screenshots and relevant Gateway logs.
 - The connection test result.
 - Whether it affects one device, one site, or the entire fleet.
 

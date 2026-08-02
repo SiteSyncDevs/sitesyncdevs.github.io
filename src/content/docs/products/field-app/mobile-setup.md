@@ -12,7 +12,7 @@ Running the Field App through Ignition's Perspective mobile app lets you sync Lo
 
 ## Steps
 
-1. Install the **Ignition Perspective** app from the Apple App Store or Google Play.
+1. Install the **Ignition Perspective** app from the [Apple App Store](https://apps.apple.com/us/app/ignition-perspective/id1385231776) or [Google Play](https://play.google.com/store/apps/details?id=com.inductiveautomation.perspective).
 2. Open the app and select **Add Gateway**, then enter the URL or IP of your Ignition gateway.
 3. From the list of Perspective applications, select the installed **SiteSync Field App** project.
 4. Start syncing.

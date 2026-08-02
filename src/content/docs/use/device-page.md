@@ -12,7 +12,7 @@ Every device has a detail page showing live values, health, diagnostics, alerts,
 
 ## Overview
 
-Device identity and quick actions: **Device EUI**, **Location** (or "No location set"), **Model**, **Firmware**, **Device Type**. Buttons: **Send Downlink** and **Set Location**. The pencil icon (top-right) opens [editing](/use/edit-device/).
+Device identity and quick actions: **Device EUI**, **Location** (or "No location set"), **Model**, **Firmware**, **Device Type**. Buttons: **Send Downlink** and **Set Location**. The pencil icon (top-right) opens editing.
 
 ## Status
 
@@ -52,5 +52,5 @@ A timestamped event log â€” e.g. "Successfully decoded message" each check-in â€
 ## Related pages
 
 - [Send a downlink](/use/send-downlink/)
-- [Edit a device](/use/edit-device/)
+- Edit a device
 - [Device diagnostics workflow](/troubleshoot/device-diagnostics/)

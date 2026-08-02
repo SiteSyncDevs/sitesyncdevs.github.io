@@ -26,7 +26,7 @@ lastReviewed: "2026-07-30"
 | UDT | Yes | The Ignition UDT (User Defined Template) that defines the structure of the decoded output. If none is selected, adding devices fails. |
 | External Profile ID | No | Links this SiteSync profile to a profile/entity in an external system. Some network servers (Actility ThingPark, ChirpStack) require a device profile; a default is set per server but can be overridden here. The magnifying glass launches the Actility profile picker — select, then save the profile to apply it to future devices. |
 | Primary Value | No | The headline metric from the device's payload (e.g. `.../data/maximumAmps`). Shown most prominently on the device detail page and fleet views. Requires a saved UDT. |
-| Display Values | No | A comma-separated list of additional payload fields to show on the device values page (e.g. `averageAmps, temperatureCelsius`). Requires a saved UDT. |
+| Display Values | No | Additional payload fields shown on the device values page. Configured on the **UDT** (not directly on this form) — see [Configure Display Values](/configure/device-profiles/tag-paths/). Requires a saved UDT. |
 | Limited Model | No | Links a custom data structure for integrations into other systems (e.g. PI). Pulls from the UDT folder `SiteSyncModels`. Implementations vary — contact support. |
 
 ## LoRa specifications

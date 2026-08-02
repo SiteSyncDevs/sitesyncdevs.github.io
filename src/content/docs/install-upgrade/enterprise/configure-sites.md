@@ -20,6 +20,10 @@ With the module and projects in place, set up your [sites](/configure/sites/unde
 Devices without an explicit site assignment may appear in a default site; move them to the correct site from Enterprise Management.
 :::
 
+:::caution[Renaming a site later]
+Changing a site's name creates a **new folder** for devices added afterward — the site keeps its existing devices, but their tags stay in the original folder. Agree on names up front to avoid split folders. See [Edit a site](/configure/sites/edit-a-site/).
+:::
+
 ## Next step
 
 [Validate the installation](/install-upgrade/enterprise/validate/).

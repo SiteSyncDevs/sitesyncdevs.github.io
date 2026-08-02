@@ -10,14 +10,12 @@ lastReviewed: "2026-07-30"
 
 SiteSync installs onto an Ignition gateway as a **module** plus one or more **Perspective projects**, all added through the Gateway web configuration page.
 
-## SiteSync Source (parent project)
+## Perspective projects
 
-Every deployment includes **SiteSync Source**, the parent Perspective project. The product projects inherit from it:
+The projects you import depend on the edition:
 
-- **Standard** → Source + the **Standard** project.
-- **Enterprise** → Source + **Enterprise Management** + **Field App**.
-
-Keep Source and its child projects on the same version.
+- **Standard** → the single **Standard** project.
+- **Enterprise** → the **SiteSync Source** parent project, with **Enterprise Management** and **Field App** inheriting from it. Keep Source and its child projects on the same version.
 
 ## Choose your path
 

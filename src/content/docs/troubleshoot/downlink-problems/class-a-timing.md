@@ -20,4 +20,4 @@ lastReviewed: "2026-07-30"
 ## Related pages
 
 - [Downlink remains queued](/troubleshoot/downlink-problems/queued/)
-- [Device-class behavior](/configure/downlinks/device-class/)
+- Device-class behavior

@@ -25,8 +25,8 @@ Some features — notably camera access to scan QR codes for onboarding — are 
 - [Add a device](/use/add-device/scan-qr/) (scan or manual)
 - [Find and open a device](/use/find-and-open-device/)
 - [Review device health](/use/field-app/review-health/) and [diagnose issues](/use/field-app/field-diagnostics/)
-- [Send a downlink](/use/send-downlink/) and [remove a device](/use/remove-device/)
+- [Send a downlink](/use/send-downlink/) and remove a device
 
 ## Data integration
 
-Once a device is synced, automation forwards its tags to downstream systems such as PI, using the synced device name, location, and device profile.
+Once a device is synced, SiteSync writes its data to tags, which can be integrated into other systems (such as PI) using the synced device name, location, and device profile.

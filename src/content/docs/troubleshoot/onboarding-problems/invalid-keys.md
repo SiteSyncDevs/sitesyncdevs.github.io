@@ -19,7 +19,7 @@ The device saved but never joins, because the **Dev EUI**, **App EUI/JoinEUI**, 
 
 ## Resolution
 
-Correct the keys via [Edit a device](/use/edit-device/) and power-cycle the device.
+Correct the keys via Edit a device and power-cycle the device.
 
 ## Related pages
 

@@ -37,6 +37,6 @@ To send several commands in one action — for example, setting a configuration 
 
 ## Related pages
 
-- [Downlink concepts](/configure/downlinks/concepts/)
+- Downlink concepts
 - [Send a downlink](/use/send-downlink/)
-- [Device-class behavior](/configure/downlinks/device-class/)
+- Device-class behavior

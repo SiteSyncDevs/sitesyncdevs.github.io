@@ -25,4 +25,4 @@ lastReviewed: "2026-07-30"
 | Application ID | The LNS application to sync into. |
 | API token / service account | With device view/create and downlink permissions. |
 
-Exact values per network server: [ChirpStack](/configure/network-servers/chirpstack/), [Actility ThingPark](/configure/network-servers/actility-thingpark/), [The Things Stack](/configure/network-servers/the-things-stack/), [Loriot](/configure/network-servers/loriot/), [Other](/configure/network-servers/other/).
+Exact values per network server: ChirpStack, [Actility ThingPark](/configure/network-servers/actility-thingpark/), [The Things Stack](/configure/network-servers/the-things-stack/), [Loriot](/configure/network-servers/loriot/), Other.

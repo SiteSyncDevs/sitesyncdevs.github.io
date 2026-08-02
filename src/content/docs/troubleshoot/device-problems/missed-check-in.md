@@ -23,6 +23,7 @@ The device previously reported but hasn't checked in within the interval defined
 1. **Last Seen** vs the profile's expected interval.
 2. If **many devices at one site** missed check-in together, suspect a gateway/network outage at that site — not individual devices.
 3. Battery level and signal on the Status panel.
+4. The device's **signal score** — a low score means weak coverage, and the device may be dropping (missing) packets rather than being fully offline.
 
 ## Resolution
 

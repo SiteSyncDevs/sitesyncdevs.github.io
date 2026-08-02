@@ -16,6 +16,10 @@ Each release's notes call out required deployment actions at the top. For exampl
 
 Always read the target version's release notes before starting — they call out anything out of the ordinary, such as specific UDTs to re-import.
 
+:::caution[Customizations may be overwritten]
+Re-importing the SiteSync Perspective projects can overwrite any customizations you've made to them. If you've modified SiteSync projects, have a **change-management strategy** in place — track your changes and be prepared to reapply them after the upgrade.
+:::
+
 ## Line these up first
 
 - Access to the Ignition Gateway **web configuration page**.
@@ -25,6 +29,6 @@ Always read the target version's release notes before starting — they call out
 
 ## Next steps
 
-1. [Back up SiteSync](/install-upgrade/upgrade/back-up/).
-2. Check [version compatibility](/install-upgrade/upgrade/version-compatibility/).
+1. Back up SiteSync.
+2. Check version compatibility.
 3. Run [Upgrade Standard](/install-upgrade/upgrade/upgrade-standard/) or [Upgrade Enterprise](/install-upgrade/upgrade/upgrade-enterprise/).

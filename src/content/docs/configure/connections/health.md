@@ -1,27 +1,26 @@
 ---
 title: "Connection health"
-description: "Understand the Active, Degraded, Failed, and Disabled connection statuses."
+description: "How SiteSync reports the health of the MQTT connection."
 products: ["standard", "enterprise-management"]
 roles: ["administrator"]
 introduced: "1.0.0"
 contentType: "reference"
-lastReviewed: "2026-07-30"
+lastReviewed: "2026-07-31"
 ---
 
-SiteSync monitors each connection and reports its status on the Connections list.
+Connection health reflects the **MQTT** connection — the channel SiteSync uses to receive device data. SiteSync checks the MQTT connection **every 30 seconds** and writes the result to a managed Ignition tag; the Connections list simply displays that tag, so the status updates in near real time.
 
 | Status | Meaning |
 | --- | --- |
-| Active | The connection is functioning normally. |
-| Degraded | The connection is reachable but experiencing errors — some data may be failing to sync. |
-| Failed | SiteSync cannot reach the external system, or the credentials are no longer valid. |
+| Active | The MQTT connection is up and receiving data. |
+| Failed | SiteSync cannot reach the broker, or the credentials are no longer valid. |
 | Disabled | The connection has been manually paused. No data is being exchanged. |
 
 <figure class="ss-shot" data-shot-id="EM-CONN-001" data-product="enterprise-management" data-viewport="desktop">
-<figcaption>Connections list showing Active, Degraded, and Failed status indicators.</figcaption>
+<figcaption>Connections list showing MQTT connection status.</figcaption>
 </figure>
 
 ## Related pages
 
-- [Test a connection](/configure/connections/test-a-connection/)
-- [Connection errors](/configure/connections/errors/)
+- [Configure MQTT](/configure/connections/configure-mqtt/)
+- [MQTT disconnected](/troubleshoot/connection-problems/mqtt-disconnected/)

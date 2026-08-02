@@ -14,9 +14,9 @@ In a multi-connection Enterprise setup, the **primary** connection is the one us
 
 ## Resolution
 
-Set the intended connection as primary — see [Select the primary connection](/configure/connections/primary-connection/). (Standard is single-connection, so this doesn't apply.)
+Set the intended connection as primary — see Select the primary connection. (Standard is single-connection, so this doesn't apply.)
 
 ## Related pages
 
-- [Select the primary connection](/configure/connections/primary-connection/)
+- Select the primary connection
 - [Connection concepts](/configure/connections/concepts/)

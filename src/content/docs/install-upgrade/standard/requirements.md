@@ -17,8 +17,8 @@ lastReviewed: "2026-07-30"
 ## Required files
 
 - The SiteSync module (`.modl`).
-- The **SiteSync Source** and **Standard** Perspective project files.
+- The **Standard** Perspective project file.
 
 ## Next step
 
-[Install the module](/install-upgrade/standard/install-module/).
+[Install the module](/install-upgrade/install-module/).

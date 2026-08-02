@@ -23,6 +23,10 @@ Update a site's name or description.
 
 Changes take effect immediately and are visible to all users with access to that site.
 
+## What happens if I change a site name?
+
+Renaming a site does **not** remove its existing devices. However, any devices added **after** the rename are created in a **new folder** matching the new name — so device tags end up split across the old and new folders. Agree on a [naming convention](/configure/sites/naming-conventions/) up front to avoid this.
+
 ## Related pages
 
 - [Create a site](/configure/sites/create-a-site/)

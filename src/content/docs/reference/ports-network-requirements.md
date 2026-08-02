@@ -15,8 +15,6 @@ SiteSync needs outbound access to your LoRa Network Server and MQTT broker.
 | MQTT broker | `8883` (TLS); some servers use `1883` |
 | LoRa Network Server API | Network-server dependent |
 
-If a firewall blocks traffic, connections time out. Ensure SiteSync's IP ranges are allowlisted.
-
-:::note[IP allowlist]
-Contact SiteSync support for the current list of IP ranges to allowlist. Add the definitive port/host list here once confirmed.
+:::note[Connections are outbound from the Ignition gateway]
+Connections are initiated **from the Ignition gateway server** — they are outbound connections to your services, not inbound to the gateway. Make sure the gateway's firewall allows outbound access to your broker and network-server API on the ports above. If a firewall blocks the traffic, connections time out.
 :::

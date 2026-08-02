@@ -23,6 +23,7 @@ Battery shows **Unknown** / `--`. Missing battery data is not counted as healthy
 1. Whether this device type is expected to report battery.
 2. Recent Last Seen.
 3. The decoder output for a battery field.
+4. The **UDT mapping** for the LoRa metrics UDT — if the decoded battery field isn't mapped to the UDT, SiteSync can't surface it.
 
 ## Related pages
 

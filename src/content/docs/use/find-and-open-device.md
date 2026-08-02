@@ -39,7 +39,7 @@ Filters and search combine — e.g. search `pump` and filter by **Alerts** to se
 ## Open a device
 
 - **Web:** double-click the device's row.
-- **Mobile:** enter at least 4 characters to search, or scan the device's QR code.
+- **Mobile:** tap the device's tile to open it, or scan its QR code to jump straight to its page. (Searching and filtering only narrow the list — tap the tile to open the device.)
 
 ## Related pages
 

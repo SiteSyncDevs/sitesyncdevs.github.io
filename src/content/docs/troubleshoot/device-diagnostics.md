@@ -34,5 +34,5 @@ An older management doc describes a "Run diagnostic" tool and Summary/Events/Met
 ## Related pages
 
 - [The device page](/use/device-page/)
-- [Device added but not reporting](/troubleshoot/device-problems/added-not-reporting/)
+- [Device added but not reporting](/troubleshoot/onboarding-problems/added-not-reporting/)
 - [Health metrics](/reference/health-metrics/)

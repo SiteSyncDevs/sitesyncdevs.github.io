@@ -29,8 +29,12 @@ Send a downlink — a message from SiteSync to a device to change settings, trig
 Downlinks are queued and delivered on the device's next uplink. The device must be online and reachable — check **Check-in Status** in the Status panel before sending.
 :::
 
+:::note[Bulk downlinks]
+To send the same downlink to many devices at once, use the **device profile page** — a bulk downlink applies to every device on that profile, rather than sending one device at a time.
+:::
+
 ## Related pages
 
-- [Downlink concepts](/configure/downlinks/concepts/)
+- Downlink concepts
 - [Configure downlink profiles](/configure/device-profiles/downlink-profiles/)
 - [Downlink remains queued](/troubleshoot/downlink-problems/queued/)

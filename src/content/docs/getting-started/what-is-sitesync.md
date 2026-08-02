@@ -33,10 +33,10 @@ A LoRaWAN device transmits to a gateway, which forwards to your LoRa Network Ser
 - **Enterprise Management** lets a central team manage the administrative side — credentials, connections to IT infrastructure, decoders, device profiles, and sites — across the whole fleet.
 - The **Field App** exposes only device onboarding and management to site users, who see only the devices for their assigned site. They can add a device, watch data start reporting, and move on — without touching the underlying infrastructure or LoRa stack.
 
-For a capability-by-capability breakdown, see the [Product comparison](/getting-started/product-comparison/).
+For a capability-by-capability breakdown, see the [Product comparison](/products/enterprise/standard-vs-enterprise/).
 
 ## Where to go next
 
-1. Compare the products on the [Product comparison](/getting-started/product-comparison/) page.
+1. Compare the products on the [Product comparison](/products/enterprise/standard-vs-enterprise/) page.
 2. Understand the [Architecture](/getting-started/architecture/).
 3. Pick a quick start: [Standard](/getting-started/quick-start-standard/), [Enterprise admin](/getting-started/quick-start-enterprise/), or [Field App](/getting-started/quick-start-field-app/).

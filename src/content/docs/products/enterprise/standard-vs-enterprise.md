@@ -10,7 +10,7 @@ lastReviewed: "2026-07-30"
 
 Choose **Standard** for a single deployment on one gateway with no site structure or role separation. Choose **Enterprise** when you need multiple sites, a central admin team separated from site users, multiple connections, and a fleet dashboard.
 
-See the full [Product comparison](/getting-started/product-comparison/) table.
+See the full [Product comparison](/products/enterprise/standard-vs-enterprise/) table.
 
 | | Standard | Enterprise |
 | --- | --- | --- |

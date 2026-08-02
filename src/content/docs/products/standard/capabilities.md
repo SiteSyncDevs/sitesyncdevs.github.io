@@ -15,4 +15,4 @@ lastReviewed: "2026-07-30"
 - Send downlinks (preconfigured, builder, or ad hoc).
 - Diagnose devices with signal, battery, packet-delivery, and status metrics.
 
-See the [Product comparison](/getting-started/product-comparison/) for how this differs from Enterprise.
+See the [Product comparison](/products/enterprise/standard-vs-enterprise/) for how this differs from Enterprise.

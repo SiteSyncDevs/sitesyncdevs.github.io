@@ -10,23 +10,23 @@ lastReviewed: "2026-07-30"
 
 ## What happens
 
-If any rows contain errors — such as a duplicate Dev EUI or a missing required field — SiteSync reports **which rows failed and why**. Successful rows are still added.
+If any rows contain errors — such as a missing required field — SiteSync reports **which rows failed and why**. Successful rows are still added.
 
 ## Resolution
 
 1. Read the reported errors and note the failing rows.
-2. Correct those rows in your CSV (fix the Dev EUI, add the missing field, remove duplicates).
+2. Correct those rows in your CSV (add the missing field, fix the Dev EUI).
 3. Re-upload **only the failed rows**.
 
 ## Common causes
 
 | Reported problem | Fix |
 | --- | --- |
-| Duplicate Dev EUI | Search for the Dev EUI across sites; the device may already exist. |
-| Missing required field | Add a Device Name / Dev EUI to the row. |
+| Duplicate Dev EUI | Not an error — SiteSync updates the existing device with that Dev EUI rather than creating a duplicate. |
+| Missing required field | Add the missing value (Device Name, Dev EUI, App EUI, or App Key) to the row. |
 | Upload fails immediately | Headers were changed — re-download the template. |
+| Rows fail with a connection/API error | Check network connectivity — [test the API connection](/configure/connections/test-a-connection/) in **Connections**. |
 
 ## Related pages
 
-- [Duplicate DevEUI](/troubleshoot/device-problems/duplicate-deveui/)
 - [Bulk-upload validation error](/troubleshoot/onboarding-problems/bulk-validation-error/)

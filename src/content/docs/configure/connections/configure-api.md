@@ -26,7 +26,7 @@ The exact URL, IDs, and credential type depend on your network server. Pick your
 - [Actility ThingPark](/configure/network-servers/actility-thingpark/)
 - [The Things Stack (TTN/TTS/TTI)](/configure/network-servers/the-things-stack/)
 - [Loriot](/configure/network-servers/loriot/)
-- [Other or custom (incl. Multitech Conduit)](/configure/network-servers/other/)
+- [Multitech Conduit](/configure/network-servers/multitech/)
 
 ## Related pages
 

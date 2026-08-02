@@ -15,7 +15,7 @@ Typical users: Ignition administrators, controls engineers, system integrators, 
 ## What you get
 
 - One [connection](/configure/connections/concepts/) to your LoRa Network Server (MQTT + API).
-- [Device profiles](/configure/device-profiles/concepts/), [decoders](/configure/decoders/concepts/), and [UDT/tag](/configure/udts-and-tags/tag-model/) modeling.
+- [Device profiles](/configure/device-profiles/concepts/), [decoders](/configure/decoders/concepts/), and UDT/tag modeling.
 - Device onboarding by form or [bulk upload](/use/bulk-upload/download-template/), [downlinks](/use/send-downlink/), and device diagnostics.
 
 ## Related pages

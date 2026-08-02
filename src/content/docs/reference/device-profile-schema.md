@@ -13,4 +13,4 @@ The complete field list for a device profile — overview, integrations, LoRa sp
 ## Related pages
 
 - [Device-profile concepts](/configure/device-profiles/concepts/)
-- [Decoder contract](/reference/decoder-contract/)
+- Decoder contract

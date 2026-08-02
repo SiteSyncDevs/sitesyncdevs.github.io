@@ -10,7 +10,7 @@ lastReviewed: "2026-07-30"
 
 Before installing, confirm:
 
-- You meet the [system requirements](/getting-started/system-requirements/).
+- You meet the system requirements.
 - You can reach the Ignition Gateway **web configuration page**.
 - You have the module `.modl` and the Perspective project files (Source + your product's project(s)).
 - You have your **network-server API credentials** and **MQTT broker** details.

@@ -26,4 +26,4 @@ All are installed through the Gateway web configuration page.
 
 ## Next step
 
-[Install the Enterprise module](/install-upgrade/enterprise/install-module/).
+[Install the module](/install-upgrade/install-module/).

@@ -26,7 +26,7 @@ The device exists in SiteSync but has never made a successful join — it shows 
 
 ## Resolution
 
-Correct any mismatched keys ([edit the device](/use/edit-device/)), power-cycle the device, and wait for a join.
+Correct any mismatched keys (edit the device), power-cycle the device, and wait for a join.
 
 ## Verify
 
@@ -38,5 +38,5 @@ Dev EUI (redacted), the site, the network server, and whether the device appears
 
 ## Related pages
 
-- [Device added but not reporting](/troubleshoot/device-problems/added-not-reporting/)
+- [Device added but not reporting](/troubleshoot/onboarding-problems/added-not-reporting/)
 - [Invalid device keys](/troubleshoot/onboarding-problems/invalid-keys/)

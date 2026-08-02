@@ -11,7 +11,7 @@ lastReviewed: "2026-07-30"
 ## Find a device
 
 - **Scan:** scan the unit's QR code to jump straight to its device page.
-- **Search:** enter at least **4 characters** of the device name, Dev EUI, or description.
+- **Search:** enter at least **4 characters** of the device name, Dev EUI, or description to narrow the list, then **tap the device's tile** to open it.
 
 On the web, double-click a table row to open the device page.
 

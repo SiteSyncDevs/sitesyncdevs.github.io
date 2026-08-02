@@ -32,4 +32,4 @@ After you save, the device is added to the selected site and appears in SiteSync
 ## Related pages
 
 - [Device never activated](/troubleshoot/device-problems/never-activated/)
-- [Device added but not reporting](/troubleshoot/device-problems/added-not-reporting/)
+- [Device added but not reporting](/troubleshoot/onboarding-problems/added-not-reporting/)

@@ -15,8 +15,11 @@ SiteSync processed the file and reported which rows failed and why — successfu
 ## Most likely causes
 
 - Changed/missing column headers (upload fails immediately).
-- Missing required field (Device Name or Dev EUI).
-- Duplicate Dev EUI.
+- Missing required field (Device Name, Dev EUI, App EUI, or App Key).
+
+:::note[Duplicate Dev EUI is not an error]
+A row whose Dev EUI already exists doesn't fail — SiteSync **updates the existing device** with that Dev EUI instead of creating a duplicate.
+:::
 
 ## Resolution
 
