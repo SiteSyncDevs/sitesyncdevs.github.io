@@ -19,9 +19,9 @@ Connection health reflects the **MQTT** connection — the channel SiteSync uses
 | Active | The MQTT connection is up and receiving data. |
 | Failed | SiteSync cannot reach the broker, or the credentials are no longer valid. |
 | Disabled | The connection has been manually paused. No data is being exchanged. |
- 
-![](/screenshots/20260802-184048.png)
- 
+
+![](/screenshots/20260802-184048.png "Connections List Showing MQTT Connections")
+
 ## Related pages
 
 - [Configure MQTT](/configure/connections/configure-mqtt/)
