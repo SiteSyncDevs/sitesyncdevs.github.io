@@ -22,6 +22,8 @@ Access your organization's sites from the left sidebar menu.
 
 ![](/screenshots/20260802-184248.png "Example Site List in SiteSync Enterprise")
 
+_Site List with several example sites in Enterprise Management_
+
 ## Product differences
 
 Sites are an **Enterprise** concept. Standard is a single deployment and does not use multi-site structure.
