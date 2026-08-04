@@ -15,6 +15,13 @@ export default defineConfig({
   // subpath. Remove that env from the workflow when the custom domain is live.
   base: process.env.SITE_BASE ?? '/',
 
+  // Redirects from legacy /lorawan-module/* URLs to the current docs structure.
+  // Astro emits a static meta-refresh page at each old path (works on GitHub Pages).
+  redirects: {
+    '/lorawan-module/qr-sync/': '/use/add-device/scan-qr/',
+    '/lorawan-module/bulk-upload/': '/use/bulk-upload/download-template/',
+  },
+
   // Auto-resolve screenshot placeholders (see plugins/remark-screenshots.mjs):
   // drop a file named by its ID into public/screenshots/ and it appears.
   markdown: {
