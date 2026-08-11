@@ -1,17 +1,20 @@
 ---
-title: "Validate the installation"
-description: "Confirm a Standard install is working end to end."
-products: ["standard"]
-roles: ["administrator"]
-introduced: "1.0.0"
-contentType: "task"
-lastReviewed: "2026-07-30"
+title: Validate the installation
+description: Confirm a Standard install is working end to end.
+products:
+  - standard
+roles:
+  - administrator
+introduced: 1.0.0
+contentType: task
+lastReviewed: 2026-07-30
+owner: ''
 ---
 
 ## Checks
 
 1. SiteSync module shows **Running** in **Config → Modules**.
-2. The Source and Standard projects load without errors.
+2. The project loads without errors.
 3. The [connection](/configure/connections/health/) shows **Active**.
 4. A test device reports values and updates **Last Seen**.
 
