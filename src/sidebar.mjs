@@ -30,6 +30,7 @@ const FOLDER_LABELS = {
   'enterprise-management': 'Enterprise Management',
   'identity-access': 'Identity and access',
   upgrade: 'Upgrade SiteSync',
+  rbac: 'Access control (RBAC)',
 };
 
 const humanize = (seg) =>

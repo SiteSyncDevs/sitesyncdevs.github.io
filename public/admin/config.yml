@@ -376,6 +376,46 @@ collections:
       - { name: owner, label: Page owner, widget: string, required: false }
       - { name: body, label: Page content, widget: markdown }
 
+  - name: configure-rbac
+    label: "Configure / Access control (RBAC)"
+    label_singular: Page
+    folder: src/content/docs/configure/rbac
+    extension: md
+    format: frontmatter
+    create: true
+    identifier_field: title
+    summary: "{{title}}{{fields.draft | ternary('  ·  DRAFT', '')}}"
+    fields:
+      - { name: draft, label: "Draft (hide from published site)", widget: boolean, default: false, required: false }
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - name: products
+        label: Applies to (products)
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: SiteSync Standard, value: standard }
+          - { label: Enterprise Management, value: enterprise-management }
+          - { label: Field App, value: field-app }
+      - name: roles
+        label: Roles
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Administrator, value: administrator }
+          - { label: Field user, value: field-user }
+      - { name: introduced, label: Introduced in version, widget: string, required: false, default: "1.0.0" }
+      - name: contentType
+        label: Content type
+        widget: select
+        required: false
+        options: [concept, task, reference, troubleshooting, integration, release, overview]
+      - { name: lastReviewed, label: Last reviewed, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: owner, label: Page owner, widget: string, required: false }
+      - { name: body, label: Page content, widget: markdown }
+
   - name: configure-connections
     label: "Configure / Connections"
     label_singular: Page
