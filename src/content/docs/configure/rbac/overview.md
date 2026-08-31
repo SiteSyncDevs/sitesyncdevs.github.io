@@ -45,6 +45,7 @@ Reference documentation from Inductive Automation:
 ## Next steps
 
 - [Configure role permissions](/configure/rbac/configure-role-permissions/)
+- [How RBAC stores its configuration](/configure/rbac/configuration-storage/)
 - [RBAC troubleshooting](/configure/rbac/troubleshooting/)
 
 ## Related pages

@@ -18,7 +18,8 @@ const SECTIONS = [
   ['use', 'Use SiteSync'],
   ['troubleshoot', 'Monitor & troubleshoot'],
   ['reference', 'Technical reference'],
-  ['release-notes', 'Release notes'],
+  ['release-notes', 'Project release notes'],
+  ['module-release-notes', 'Module release notes'],
   ['support', 'Support'],
 ];
 

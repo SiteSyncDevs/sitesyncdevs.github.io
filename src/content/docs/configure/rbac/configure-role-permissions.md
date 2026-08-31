@@ -14,6 +14,21 @@ You'll find this screen in **Enterprise Management**, under **Settings → RBAC*
 Although the screen itself lives in Enterprise Management, the permissions you configure here only govern what a person can do in the **Field App** — they have no effect on access to Enterprise Management or Site dashboards themselves.
 :::
 
+## Before you enable RBAC
+
+Confirm these two things first. Skipping either one doesn't just cause a minor glitch — it can silently lock every user out of Add, Edit, and Delete, with no way to recover except reassigning the Identity Provider.
+
+1. **An Identity Provider must be assigned to the Field App project** (**Project Properties → General → Identity Provider**). Without one, no one can log in at all — every session stays anonymous permanently, so a role-based grant can never match anyone, including whoever is supposed to be the Administrator.
+2. **Both projects must use the same Identity Provider.** The Enterprise Management project (where you configure permissions) and the Field App project (where they're enforced) must be assigned the **same** Identity Provider.
+
+:::caution[Same Identity Provider, same role claim]
+If the two projects use different providers — or the same provider with a different role-claim mapping — a role name typed into the Configure Role Permissions screen may never match what a Field App user's session actually receives, and that grant will **silently never take effect**.
+:::
+
+:::note[Installers: one-time module setup]
+Whoever installs the module must also set three per-install values (project name, error popup, config tag path) in `rbac/settings/code.py` — see [Install-time settings](/configure/rbac/configuration-storage/#install-time-settings-rbacsettingscodepy).
+:::
+
 ## RBAC Enabled
 
 The toggle at the top of the screen turns enforcement on or off entirely. When off, every authenticated user has full access, regardless of anything else configured below.
