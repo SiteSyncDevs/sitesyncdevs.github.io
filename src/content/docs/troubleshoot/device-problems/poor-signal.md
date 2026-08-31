@@ -20,8 +20,9 @@ The device's dual-margin signal rating is **Fair** or **Poor** (see [Health metr
 
 ## Check these first
 
-1. **RSSI** and **SNR** on the Diagnostics panel.
-2. Whether **many devices** share poor/fair signal — that points to gateway placement, not one device.
+1. Hover the device's row on the Site Health dashboard to open the [Signal Health tooltip](/reference/health-metrics/#signal-health-tooltip) — it shows which margin is governing and a plain-language diagnostic.
+2. **RSSI** and **SNR** on the Diagnostics panel.
+3. Whether **many devices** share poor/fair signal — that points to gateway placement, not one device.
 
 ## Resolution
 

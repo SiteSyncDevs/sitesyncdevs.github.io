@@ -26,6 +26,16 @@ Diagnostic messaging distinguishes noise/interference-limited links from weak/ra
 | Fair   | 5 to < 10 dB  |
 | Poor   | < 5 dB        |
 
+### Signal Health tooltip
+
+On the Site Health dashboard, **hover over a problem device row** — any device flagged with poor or fair signal — to open a **Signal Health** tooltip with the full diagnostic breakdown for that link. It shows each margin and its rating, which one is currently **governing** (the worse of the two, and therefore the rating the device receives), packet loss over the last 24 hours, uplinks received and dropped, the raw RSSI / SNR / SF, and a plain-language explanation of what's limiting the link and what to check.
+
+<figure class="ss-shot" data-shot-id="DASH-SIGNAL-HEALTH-TOOLTIP" data-product="enterprise-management" data-viewport="desktop">
+<figcaption>Signal Health tooltip on a poor-signal device: SNR margin +6.5 dB (Fair), ESP margin +1.9 dB (Poor, governing), packet loss 7 of 1302 (0.5%), with a diagnostic note pointing to distance / path loss.</figcaption>
+</figure>
+
+In the example above, the SNR margin is Fair but the ESP margin is Poor, so ESP is **governing** and the device is rated Poor. The note — weak received power near the sensitivity floor — points to distance or path loss, so the fix is antenna, placement, or spreading factor rather than noise or interference.
+
 ## Battery health
 
 Battery is shown as one reading per device; SiteSync auto-detects whether the tag is in volts or percent. Missing battery data is **Unknown** and is not counted as healthy.
