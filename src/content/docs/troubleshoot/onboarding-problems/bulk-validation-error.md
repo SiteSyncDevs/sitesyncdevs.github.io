@@ -15,9 +15,9 @@ SiteSync processed the file and reported which rows failed and why — successfu
 ## Most likely causes
 
 - Changed/missing column headers (upload fails immediately).
-- Missing required field (Device Name, Dev EUI, App EUI, or App Key).
-- A Dev EUI or a tag path **repeated within the file** (each must be unique per file).
-- A Device Name containing a forward slash (`/`).
+- Missing required field (`name`, `dev_eui`, `join_eui`, or `app_key`).
+- A `dev_eui` or a `tag_path` **repeated within the file** (each must be unique per file).
+- A `name` containing a forward slash (`/`).
 - A `deviceType` that doesn't match a profile label exactly — often a trailing space or an ambiguous duplicate label.
 - A `tag_path` with an unknown `[provider]` prefix or illegal path characters.
 

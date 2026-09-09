@@ -16,12 +16,12 @@ Catch problems before uploading, when they're cheapest to fix.
 
 - The file is a **CSV** (only CSV is supported).
 - Column **headers are unchanged** from the downloaded template.
-- Every row has a **Device Name** and a valid 16-character **Dev EUI**.
-- Dev EUI values are correct — a mistyped EUI produces a device that never connects.
-- **No Dev EUI is repeated** within the file, and **no tag path is repeated** within the file.
-- **Device Names contain no forward slash (`/`).**
-- Any **deviceType** values match a profile label exactly (no trailing spaces, no ambiguous duplicate labels).
-- Any **tag_path** values use a valid tag provider (if a `[provider]` prefix is given) and legal path characters.
+- Every row has a `name` and a valid 16-character `dev_eui`.
+- `dev_eui` values are correct — a mistyped EUI produces a device that never connects.
+- **No `dev_eui` is repeated** within the file, and **no `tag_path` resolves to the same folder** as another row.
+- **`name` values contain no forward slash (`/`).**
+- Any `deviceType` values match a profile label exactly (no trailing spaces, no ambiguous duplicate labels).
+- Any `tag_path` values use a valid tag provider (if a `[provider]` prefix is given) and legal path characters.
 
 ## Related pages
 
