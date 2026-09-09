@@ -12,14 +12,41 @@ Add one row per device. The columns match the fields you'd enter manually in QR 
 
 | Column | Required | Description |
 | --- | --- | --- |
-| Device Name | Yes | A unique, human-readable label for the device. |
+| Device Name | Yes | A human-readable label for the device. Cannot contain a forward slash (`/`) — see the caution below. |
 | Dev EUI | Yes | The device's unique 16-character hardware identifier, from the device label. |
 | App EUI | Yes | The Application EUI, from the device label or network server. |
 | App Key | Yes | The encryption key, from the device label or manufacturer docs. |
+| deviceType | No | The device profile for this row. Leave blank to use the **Device Type** selected on the form; fill it in to mix sensor types in one upload. Must match a profile label **exactly**. |
+| tag_path | No | Where this device's tags are created. Leave blank to place the device in the site folder; fill it in to target a specific folder, optionally with a tag provider. |
 | Description | No | A note about the device — what it monitors, where it's installed. |
 
 :::tip[Extra columns become metadata]
 Any additional columns you add beyond these are rolled up into the device's **MetaData / customattributes** tag and displayed on the device info page — a handy way to carry through asset IDs, locations, or other attributes.
+:::
+
+## Mixing device types in one upload
+
+The **deviceType** column sets the device profile per row, so a single file can contain several sensor types. Any row that leaves deviceType blank uses the Device Type selected on the form instead.
+
+The value must match a profile label exactly, so watch for two common data-quality traps in your profile list:
+
+- **Trailing spaces.** A profile named `TWTGPressure ` (with a trailing space) won't match a CSV that says `TWTGPressure` — the row uploads with no profile. Trim spaces from your profile labels.
+- **Duplicate labels.** If the same label exists on two profiles, the value is ambiguous and the row is rejected. Give each profile a unique label.
+
+## Targeting a tag folder with `tag_path`
+
+By default every device lands in its **site folder**. Use the **tag_path** column to place a device somewhere specific instead:
+
+- A plain path such as `Plant A/Unit 3` creates the device under that folder.
+- A path may include a **tag provider** prefix in brackets, e.g. `[default]Plant A/Unit 3`. With no prefix, the device uses the session's default tag provider (`default`).
+- Spacing, underscores, case, and stray or doubled slashes are cleaned up automatically — `[default]\\Plant A//Unit 3//` resolves to `[default]Plant A/Unit 3`.
+
+:::note[Tag paths must be unique]
+Two devices can't share the same tag path — a row that collides with another row (or an existing device) is rejected. Duplicate **device names**, on the other hand, are allowed.
+:::
+
+:::caution[No slashes in the device name]
+A `/` in the Device Name would nest the device's tag under an unintended folder, so names containing a slash are rejected. Use the **tag_path** column to control foldering instead.
 :::
 
 :::caution[Double-check Dev EUI values]

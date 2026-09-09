@@ -18,7 +18,10 @@ Catch problems before uploading, when they're cheapest to fix.
 - Column **headers are unchanged** from the downloaded template.
 - Every row has a **Device Name** and a valid 16-character **Dev EUI**.
 - Dev EUI values are correct — a mistyped EUI produces a device that never connects.
-- The file contains a **single device type** (one manufacturer/model per upload).
+- **No Dev EUI is repeated** within the file, and **no tag path is repeated** within the file.
+- **Device Names contain no forward slash (`/`).**
+- Any **deviceType** values match a profile label exactly (no trailing spaces, no ambiguous duplicate labels).
+- Any **tag_path** values use a valid tag provider (if a `[provider]` prefix is given) and legal path characters.
 
 ## Related pages
 

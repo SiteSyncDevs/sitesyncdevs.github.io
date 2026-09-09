@@ -14,13 +14,13 @@ Upload your completed CSV to add all its devices to one site.
 
 ## Steps
 
-1. On the **Bulk Upload** page, use the **Site** dropdown to select the site all devices in this upload will be assigned to.
-2. Use the **Device Type** fields to set the manufacturer and model. Both apply to every device in the file.
+1. On the **Bulk Upload** page, use the **Site** dropdown to select the site devices are assigned to.
+2. Use the **Device Type** fields to set the manufacturer and model.
 3. Select **Browse** to locate your CSV, or drag and drop it into the upload area. Only CSV files are supported.
 4. Select **Upload**.
 
-:::caution[One site, one device type per file]
-All devices in a single upload go to the selected site and share the selected device type. For multiple sites or device types, upload separate batches.
+:::note[The form supplies defaults; the CSV can override]
+The **Device Type** you pick applies to every row that leaves the `deviceType` column blank — fill that column in to mix sensor types in one file. Likewise, rows without a `tag_path` land in the selected **Site** folder, while a `tag_path` value sends that device to a specific folder. See [Complete the template](/use/bulk-upload/complete-template/).
 :::
 
 ## Expected result
