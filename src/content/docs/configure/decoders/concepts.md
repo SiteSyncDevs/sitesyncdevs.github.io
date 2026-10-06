@@ -15,7 +15,7 @@ A decoder turns a device's raw LoRaWAN payload into named, structured values Sit
 - **JavaScript decoder** — a function you paste in or a `.js` file you upload, run inside SiteSync.
 - **API decoder** — SiteSync sends the payload to a URL you specify and uses the decoded response.
 
-See Create a decoder for both.
+See [Create a decoder](/configure/decoders/create/) for both.
 
 ## Managing decoders
 
@@ -29,6 +29,6 @@ SiteSync lets you add, delete, and manage decoders — including updating decode
 
 ## Related tasks
 
-- Create a decoder
+- [Create a decoder](/configure/decoders/create/)
 - [Test a decoder](/configure/decoders/test/)
 - [Decode error](/troubleshoot/device-problems/decode-error/)

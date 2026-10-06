@@ -25,5 +25,5 @@ The decoded fields match what you expect for that payload — and align with the
 
 ## Related pages
 
-- Create a decoder
-- Input and output contract
+- [Create a decoder](/configure/decoders/create/)
+- [Decoder concepts](/configure/decoders/concepts/)
