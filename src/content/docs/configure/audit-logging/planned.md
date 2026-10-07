@@ -14,6 +14,10 @@ The capabilities on this page are **planned**, not yet available. They build on 
 
 ## Device replacement history
 
+:::note[Now available in Beta (1.0.2)]
+Much of this has shipped — [Swap a device](/use/device-swap/) now hands over the tag path, archives the old sensor (rather than deleting it), records the reason, and links the two. This section covers the remaining longer-term goals.
+:::
+
 The goal is to link every sensor replacement permanently to the device it replaced, so the full hardware history of a measurement point survives any number of swaps.
 
 ### How replacements work today
@@ -31,6 +35,10 @@ The goal is to link every sensor replacement permanently to the device it replac
 - **Site-wide reporting** — export all replacements for a site, for example replacements per month by reason.
 
 ## Device configuration history
+
+:::note[Now available in Beta (1.0.2)]
+Permanent downlink history has shipped — see [Downlink history](/use/downlink-history/). Every downlink is now kept permanently and can be resent to a replacement sensor. This section covers the remaining longer-term goals, such as a current-configuration view.
+:::
 
 The goal is to keep a permanent record of every configuration sent to each device, and to show each device's current configuration at a glance.
 
