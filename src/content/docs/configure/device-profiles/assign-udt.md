@@ -22,6 +22,14 @@ Attach a UDT (User Defined Template) to a device profile so decoded data has a d
 If no UDT is selected, **adding devices fails** for this profile.
 :::
 
+## Manage UDTs
+
+The UDTs you can assign come from the UDT library in **Data Manager → UDTs**, where you can add, filter, and delete them.
+
+<figure class="ss-shot" data-shot-id="UDT-MANAGE-001" data-product="enterprise-management" data-viewport="desktop">
+<figcaption>Manage UDTs in Data Manager: each UDT with its name, a filter box, + New UDT, and a delete control per row.</figcaption>
+</figure>
+
 ## Related pages
 
 - UDT requirements

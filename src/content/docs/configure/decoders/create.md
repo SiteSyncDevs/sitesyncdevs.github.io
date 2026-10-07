@@ -12,7 +12,7 @@ A decoder turns a device's raw LoRaWAN payload into named values SiteSync can mo
 
 ## Before you begin
 
-- Open **Device profiles → Decoders** and select **+ Add decoder** (or open an existing one to edit it).
+- Open **Data Manager → Decoders** and select **+ New Decoder** (or open an existing one to edit it).
 - Give the decoder a clear **name** — this is what you'll select on a [device profile](/configure/device-profiles/assign-decoder/).
 - At the top of the editor, choose the decoder type: **Decoder** (JavaScript) or **API**.
 

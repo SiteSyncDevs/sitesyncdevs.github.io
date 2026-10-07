@@ -10,6 +10,10 @@ lastReviewed: "2026-10-07"
 
 Each site has a **map** showing every device that has a location, as a status-colored pin. It's the quickest way to see where your devices are and how they're doing at a glance.
 
+<figure class="ss-shot" data-shot-id="USE-SITE-MAP-001" data-product="field-app" data-viewport="mobile">
+<figcaption>A site map with status-colored pins, the search bar and device count ("3 devices · 18 without location"), the fit-all / my-location / list / refresh controls, and the collapsible device list.</figcaption>
+</figure>
+
 ## Open the map
 
 Open the site map from the **site card** — in the Enterprise Management app and in the Field App, the card has a **Site map** button that takes you to that site's map.

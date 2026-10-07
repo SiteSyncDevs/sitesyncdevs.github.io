@@ -19,7 +19,11 @@ See [Create a decoder](/configure/decoders/create/) for both.
 
 ## Managing decoders
 
-SiteSync lets you add, delete, and manage decoders — including updating decoder titles and uploading decoder files — so only relevant, current decoders are available to device profiles.
+SiteSync lets you add, delete, and manage decoders — including updating decoder titles and uploading decoder files — so only relevant, current decoders are available to device profiles. Find them in **Data Manager → Decoders**.
+
+<figure class="ss-shot" data-shot-id="DEC-MANAGE-001" data-product="enterprise-management" data-viewport="desktop">
+<figcaption>Manage Decoders in Data Manager: each decoder with its name and type, a filter box, + New Decoder, and a delete control per row.</figcaption>
+</figure>
 
 ## Key behavior
 

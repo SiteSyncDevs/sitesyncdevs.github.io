@@ -14,6 +14,12 @@ Add downlinks — over-the-air configuration commands — to a device profile so
 
 Downlinks are linked to a device profile and show up on the device. Some profiles come pre-configured with downlinks; you can add your own.
 
+Open a device profile and select its **Downlinks** tab to manage its downlink commands.
+
+<figure class="ss-shot" data-shot-id="DP-DOWNLINK-COMMANDS-001" data-product="enterprise-management" data-viewport="desktop">
+<figcaption>The Downlinks tab on a device profile — manage pre-configured downlink commands, with Bulk Send, Edit / Delete, and + Add Downlink (shown here with no commands yet).</figcaption>
+</figure>
+
 ## Add a downlink
 
 To add a downlink you need:

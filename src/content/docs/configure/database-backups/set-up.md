@@ -14,6 +14,16 @@ Database backups is in beta in 1.0.2. See the [overview](/configure/database-bac
 
 Open **Database Backups** (8.1: **Config › SiteSync**; 8.3: **Platform › SiteSync**). The page has four parts: **Status**, **Gateway Backup Snapshot**, **Folder or Network Share**, and **Backups**.
 
+The page looks slightly different depending on your Ignition version — the settings are the same, only the Gateway menu and the snapshot path differ:
+
+<figure class="ss-shot" data-shot-id="DB-BACKUPS-SETUP-83" data-product="enterprise-management" data-viewport="desktop">
+<figcaption>On Ignition 8.3 (Platform › SiteSync › Database Backups): the Status panel above the Gateway Backup Snapshot settings. Snapshots are written under <code>data/config/local/com.syncautomation.LoraWANDecoder/backups</code>.</figcaption>
+</figure>
+
+<figure class="ss-shot" data-shot-id="DB-BACKUPS-SETUP-81" data-product="enterprise-management" data-viewport="desktop">
+<figcaption>On Ignition 8.1 (Config › SiteSync › Database Backups): the same page, with snapshots written under <code>data/modules/com.syncautomation.LoraWANDecoder/backups</code>.</figcaption>
+</figure>
+
 ## Check the status
 
 **Status** shows when the last Gateway snapshot and the last folder backup were taken, whether they worked, and when the next ones are due.

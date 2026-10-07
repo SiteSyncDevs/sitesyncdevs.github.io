@@ -10,6 +10,10 @@ lastReviewed: "2026-09-30"
 
 Administrators decide what is logged, in **Enterprise Management › Settings › Audit Log** (beside [RBAC](/configure/rbac/overview/)). Changes take effect **immediately** in every SiteSync app, with no project update.
 
+<figure class="ss-shot" data-shot-id="AUDIT-CONFIG-001" data-product="enterprise-management" data-viewport="desktop">
+<figcaption>The Configure Audit Logging screen: the Audit logging master toggle, the Audit profile panel (SiteSyncAudit, retention, status, recent events), and the Audit scope sections with per-section recorded counts and Select all / Clear.</figcaption>
+</figure>
+
 ## The settings
 
 - **Audit logging** — the master switch that turns all recording on or off. Events already in the log are kept either way.
