@@ -1,18 +1,18 @@
 ---
-title: "Downlink history (Beta)"
+title: "Downlink history"
 description: "Every downlink sent through SiteSync is kept permanently. Review what a replaced sensor was sent and resend its settings to the new one."
 products: ["enterprise-management", "field-app"]
 roles: ["administrator"]
 introduced: "1.0.2"
 contentType: "task"
-lastReviewed: "2026-10-07"
+lastReviewed: "2026-10-22"
 ---
 
-:::caution[Beta — available from 1.0.2]
-Available in the Enterprise Management app and the Field App from SiteSync 1.0.2. Beta features are fully supported, but screen details may still change based on feedback.
+:::note[Availability]
+Available in the Enterprise Management app and the Field App from SiteSync 1.0.2, and generally available from [SiteSync 1.1.0](/release-notes/1-1-0/).
 :::
 
-From SiteSync 1.0.2, every downlink sent through SiteSync is kept **permanently**, independent of how long your audit log is retained. When you replace a sensor, you can review what the old sensor was sent and resend its settings to the new one with a few clicks.
+From SiteSync 1.0.2, every downlink sent through SiteSync is kept **permanently** in its own history table, separate from the audit log and its 90-day retention. When you replace a sensor, you can review what the old sensor was sent and resend its settings to the new one with a few clicks.
 
 ## What's recorded
 
@@ -27,9 +27,12 @@ Each frame sent to a device is recorded with:
 | Port and payload | Port 10, `01AB` |
 | Encoder answers | The values entered in the downlink builder |
 | Frames | Frame 2 of 3, for multi-frame commands |
+| Tag path | The position's tag path, so history follows a position through sensor swaps |
+| Device profile | The device's profile at the time it was sent |
+| Network server | The network server type and application it went to |
 | Result | Sent or Failed, with the network server's response or error |
 
-Downlinks that fail are recorded too, so you can see what was attempted.
+Downlinks that fail are recorded too, so you can see what was attempted. Multi-frame commands get one row per frame.
 
 ## Downlinks sent before 1.0.2
 
@@ -64,6 +67,28 @@ Resent downlinks are recorded in the new sensor's history with the source *Resen
 | --- | --- |
 | View previous downlinks | Read access to the device's site |
 | Resend them | Edit access to the device's site |
+
+## Where it's stored
+
+The module creates a **`DownlinkHistory`** table the first time it starts after the 1.0.2 upgrade, in the SiteSync database you already use — SQLite, or your PostgreSQL database. No manual database step is needed. The table is indexed by device and by tag path over send time, so a position's history stays fast to read even as sensors are swapped in and out of it.
+
+About 90 seconds after that first start, downlinks already in the audit log are copied in once and marked **Backfill from audit log** — see [Downlinks sent before 1.0.2](#downlinks-sent-before-102). Every send after that is written automatically, and rows are **never pruned**.
+
+### Row reference
+
+Each row holds:
+
+| Column | Holds | Column | Holds |
+|---|---|---|---|
+| `devEUI` | The device it was sent to | `port` | LoRaWAN port |
+| `tenantID` | The device's site | `payloadHex` | The payload sent, in hex |
+| `tagPath` | Tag path, so history follows a position through swaps | `frameIndex`, `frameCount` | Frame 2 of 3, for multi-frame commands |
+| `sentAt` | When it was sent (UTC) | `encoderAnswers` | Downlink builder values |
+| `userName` | Who sent it, or *SiteSync* | `deviceProfileID` | The device's profile at the time |
+| `source` | Device downlinks, builder, bulk, script, or resend | `networkServerType`, `applicationID` | Network server and application |
+| `commandName` | The saved command's name | `status` | `SENT` or `FAILED` |
+| `description` | The command's description | `responseMessage` | The network server's response or error |
+| `id` | Row id | `resentFromId` | The original row, when this is a resend |
 
 ## For integrators
 

@@ -5,14 +5,14 @@ products: ["standard", "enterprise-management"]
 roles: ["administrator"]
 introduced: "1.0.0"
 contentType: "reference"
-lastReviewed: "2026-07-31"
+lastReviewed: "2026-10-22"
 ---
 
-Add one row per device. Use the column headers exactly as they appear in the downloaded template (shown below); the values map to the same fields you'd enter manually in QR Sync.
+Add one row per device. Use the column headers exactly as they appear in the downloaded template (shown below); the values map to the same fields you'd enter manually in QR Sync. Since [SiteSync 1.1.0](/release-notes/1-1-0/) the template contains only the seven columns SiteSync uses; serial number, location, and firmware/hardware version were removed.
 
 | Column | Required | Description |
 | --- | --- | --- |
-| `dev_eui` | Yes | The device's unique 16-character hardware identifier (Dev EUI), from the device label. |
+| `dev_eui` | Yes | The device's unique 16-character hardware identifier (Dev EUI), from the device label. Must not belong to a device already in SiteSync, including an archived one. |
 | `join_eui` | Yes | The Join EUI / App EUI, from the device label or network server. |
 | `app_key` | Yes | The OTAA encryption key, from the device label or manufacturer docs. |
 | `name` | Yes | A human-readable label for the device. Cannot contain a forward slash (`/`) — see the caution below. |
@@ -55,6 +55,8 @@ A `/` in the `name` column would nest the device's tag under an unintended folde
 
 :::caution[Double-check dev_eui values]
 A mistyped `dev_eui` produces a device that appears in SiteSync but never connects. These are difficult to find after a large upload.
+
+A `dev_eui` that already exists in SiteSync, active or archived, can't be added again. The upload preview flags those rows and skips them. To bring back an archived device, open it and un-archive it instead of re-uploading it.
 :::
 
 ## Related pages

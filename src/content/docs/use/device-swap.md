@@ -1,15 +1,15 @@
 ---
-title: "Swap a device (Beta)"
+title: "Swap a device"
 description: "Replace a failed, flat, or upgraded sensor in one guided flow. The new sensor takes over the old one's tags and the old sensor is archived, not deleted."
 products: ["enterprise-management", "field-app"]
 roles: ["administrator"]
 introduced: "1.0.2"
 contentType: "task"
-lastReviewed: "2026-10-07"
+lastReviewed: "2026-10-22"
 ---
 
-:::caution[Beta — available from 1.0.2]
-Available in the Enterprise Management app and the Field App from SiteSync 1.0.2. Beta features are fully supported, but screen details may still change based on feedback.
+:::note[Availability]
+Available in the Enterprise Management app and the Field App from SiteSync 1.0.2, and generally available from [SiteSync 1.1.0](/release-notes/1-1-0/).
 :::
 
 When a sensor fails, runs out of battery, or is upgraded, **Swap Device** replaces it in one guided flow. The new sensor takes over the old one's position, so its tags, trends, and alarms carry on without a gap. The old sensor is **archived** — it disappears from your device lists but is never deleted.

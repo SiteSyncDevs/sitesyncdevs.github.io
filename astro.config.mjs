@@ -20,6 +20,7 @@ export default defineConfig({
   redirects: {
     '/lorawan-module/qr-sync/': '/use/add-device/scan-qr/',
     '/lorawan-module/bulk-upload/': '/use/bulk-upload/download-template/',
+    '/lorawan-module/network-server/': '/configure/network-servers/supported/',
   },
 
   // Auto-resolve screenshot placeholders (see plugins/remark-screenshots.mjs):

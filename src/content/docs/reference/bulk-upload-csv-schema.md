@@ -5,16 +5,16 @@ products: ["standard", "enterprise-management"]
 roles: ["administrator"]
 introduced: "1.0.0"
 contentType: "reference"
-lastReviewed: "2026-07-31"
+lastReviewed: "2026-10-22"
 ---
 
 Always start from the downloaded [template](/use/bulk-upload/download-template/) — don't change the headers.
 
-Header names below match the template exactly.
+Header names below match the template exactly. As of [SiteSync 1.1.0](/release-notes/1-1-0/), the template contains only these seven columns; serial number, location, and firmware/hardware version were removed.
 
 | Column | Required | Description |
 | --- | --- | --- |
-| `dev_eui` | Yes | 16-character hardware identifier (Dev EUI). Unique within the file. |
+| `dev_eui` | Yes | 16-character hardware identifier (Dev EUI). Unique within the file, and must not belong to an existing device, active or archived. Rows with an existing Dev EUI are flagged in the preview and skipped. |
 | `join_eui` | Yes | Join EUI / App EUI. |
 | `app_key` | Yes | OTAA root key. |
 | `name` | Yes | Human-readable label. No forward slash (`/`). |
