@@ -1,65 +1,91 @@
 ---
 title: "Device actions"
-description: "Which action to use when a device changes, and what each one does in SiteSync, ThingPark and PI."
+description: "Which action to use when a device changes, and what each one does to the device, its tags, the network server and its downlink history."
 products: ["enterprise-management", "field-app"]
 roles: ["administrator"]
 contentType: "reference"
 lastReviewed: "2026-11-17"
 ---
 
-Every change to a device after it's added goes through one of eight actions. This page shows which one fits the situation and what each one does to the device's tags, history, network server registration and PI points.
+After a device is added, changes to it go through a handful of actions on its edit page. This page shows which one fits the situation, what each one changes, and what happens in order when you run it.
 
-To open them, go to the device's page, choose **Edit**, then choose **Device actions**. A panel opens on the right with a tile for each action. Start over, Archive it and Delete it sit under **Danger zone**.
-
-Device actions is an optional feature. If the edit page shows separate **Swap Device**, **Rename**, **Move Site**, **Change Type** and **Delete** buttons instead, it isn't turned on for your system.
+To find them, open the device's page and choose **Edit**. **Device Name** is under Editable fields. **Move Site**, **Swap Device**, **Change Device Type** and **In testing** are under Device actions, and **Delete Device** is under Danger Zone. In testing appears only on systems with commissioning turned on.
 
 ## Which action to use
 
 ```mermaid
 flowchart LR
   Q{What changed?}
-  Q -->|New hardware at the same measurement point| replace[Replace the sensor]
-  Q -->|Only the name is wrong| rename[Rename it]
-  Q -->|Same measurement, new unit, folder or site| move[Move it]
-  Q -->|New asset or measurement point| newuse[Use it for something new]
-  Q -->|Wrong model, profile or decoder| type[Change its device type]
-  Q -->|It won't join, or needs a reboot| start[Start over]
-  Q -->|It's coming out of service| S{Could it come back?}
-  S -->|Yes| archive[Archive it]
-  S -->|No| delete[Delete it]
+  Q -->|New hardware at the same measurement point| swap[Swap Device]
+  Q -->|Only the name is wrong| rename[Change the Device Name]
+  Q -->|It belongs to a different site| move[Move Site]
+  Q -->|It has the wrong device profile| type[Change Device Type]
+  Q -->|It's still being commissioned| testing[In testing]
+  Q -->|It's out of service for good| delete[Delete Device]
 ```
 
-## What each action does
+## What each action changes
 
-The ThingPark and PI columns apply when SiteSync is connected to them.
+| Action | The device in SiteSync | Tags | Network server | Downlink history |
+| --- | --- | --- | --- | --- |
+| Swap Device | The new sensor takes the old one's name, description, metadata, install location and photo. The old sensor is archived. | The new sensor writes to the old sensor's tag path, so trends, history and alarms carry on. | The new sensor is registered if you added it during the swap. The old sensor's registration is left as it is. | The old sensor's downlinks are kept and listed on the new sensor, ready to resend. |
+| Change the Device Name | The name changes. | The tag keeps its name. To rename the tag as well, use Tag Management. | Not changed. | Stays with the device. |
+| Move Site | The device belongs to the new site. | Stay at the same tag path. | Not changed. | Stays with the device. |
+| Change Device Type | The device uses the new device profile. | The tag switches to the new profile's tag type and keeps its values, history and alarm settings. | Not changed. | Stays with the device. |
+| In testing | The device is marked In testing and left out of dashboards and counts. | Keep updating as normal. | Not changed. | Stays with the device. |
+| Delete Device | The device is removed. | The device's tags are deleted. | The device is removed from the network server. | Kept. Downlink history is never removed. |
 
-| Action | SiteSync | ThingPark | PI |
-| --- | --- | --- | --- |
-| Replace the sensor | The new sensor takes over the name, tags, photos and history. The old sensor moves to Archived. | The new sensor is added to the site's domain. The old sensor is removed. | Nothing changes. Same points, and history carries on. |
-| Rename it | Tags are renamed. Their history follows. | Renamed. Same domain. | Same points, renamed to match. History stays with them. |
-| Move it | Tags move to the new site, unit or folder. Their history follows. | Moves to the new site's domain. Stays where it is if the site doesn't change. | Same points, history kept. The site part of their names changes if the site does. |
-| Use it for something new | New name and a new installation record. The old history stays under the old name. | Renamed, and moved to the new site's domain if the site changes. Stays joined. | New points under the new name. The old points are kept as history. |
-| Change its device type | New profile. Tags are rebuilt under the same name. | Device profile updated. The sensor joins again. | Readings that match keep their points. You choose what happens to the others. |
-| Start over | Removed and added back with the same name. Photos and installation record kept. | Removed and created again, so the sensor joins fresh. | Same points. Values resume once it rejoins. |
-| Archive it | Hidden from lists. Tags and history kept. It can be restored. | Stays in ThingPark and keeps its join. | Sending stops. Points and history kept. |
-| Delete it | The device, its tags and its installation record are deleted. The name is free to use again. | Removed from ThingPark. | Nothing more is sent. The points and their history stay in PI. |
+## What happens when you run each one
 
-Each action shows this same summary for the device you're working on before anything runs, and reports the result for each system when it finishes.
+### Swap Device
 
-## Choices that change the result
+1. If the new sensor isn't in SiteSync yet, it's added and registered on the network server.
+2. The new sensor takes over the old sensor's tag path.
+3. The old sensor's name, description, metadata, install location and photo are copied to the new sensor.
+4. The old sensor is archived and the replacement is recorded, with the reason and who did it.
+5. The audit log gets **Device replaced** on the old sensor and **Device swapped in** on the new one.
 
-Some actions ask a question, and the answer changes one of the cells above.
+The full walkthrough is on [Swap a device](/use/device-swap/).
 
-| Action | Choice | If you change it |
-| --- | --- | --- |
-| Replace the sensor | Remove the old sensor from ThingPark (ticked) | Unticked, the old sensor stays joined so it can be reused as a spare. |
-| Rename it | Rename the PI points (yes) | With no, the points keep their old names and the device notes that the names differ. |
-| Move it | Keep the same PI points (yes) | With no, new points start at the new location. The old points stay in PI and stop updating. |
-| Archive it | Remove it from ThingPark (unticked) | Ticked, it's removed from ThingPark as well. |
-| Delete it | Remove it from ThingPark (ticked) | Unticked, it stays joined, for example to add it back later without new keys. |
+### Change the Device Name
+
+1. Enter the new name in **Device Name** and choose **Save**.
+2. The name changes everywhere SiteSync shows the device.
+3. The audit log gets **Device renamed**.
+
+The tag isn't renamed by this. See [Move and rename tags](/use/move-rename-tags/).
+
+### Move Site
+
+1. Choose the new site.
+2. The device moves to that site in SiteSync, and it's listed and counted there from then on.
+3. The audit log gets **Device moved to another site**, with the old and new site.
+
+### Change Device Type
+
+1. Choose the new device profile.
+2. The device is saved with that profile, so its next uplinks are decoded with the new profile's decoder.
+3. The device's tag is pointed at the new profile's tag type. Values, history and alarm settings on the tag are kept.
+4. The audit log gets **Device type changed**.
+
+### In testing
+
+1. Turn **In testing** on.
+2. The device keeps reporting, but it's left out of dashboards and counts.
+3. Turn it off when the device goes live.
+
+### Delete Device
+
+1. The device is removed from the network server.
+2. The device is removed from SiteSync.
+3. The device's tags are deleted.
+4. The audit log gets **Device deleted**.
+
+Downlinks that were sent to the device stay in the downlink history.
 
 ## Related pages
 
 - [Swap a device](/use/device-swap/)
 - [Downlink history](/use/downlink-history/)
 - [Move and rename tags](/use/move-rename-tags/)
+- [Audit logging](/configure/audit-logging/overview/)
