@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { sidebar } from './src/sidebar.mjs';
 import remarkScreenshots from './plugins/remark-screenshots.mjs';
+import mermaid from 'astro-mermaid';
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,6 +31,8 @@ export default defineConfig({
   },
 
   integrations: [
+    // Mermaid diagrams from ```mermaid code blocks. Must come before starlight.
+    mermaid({ autoTheme: true }),
     starlight({
       title: 'SiteSync Docs',
       description:
