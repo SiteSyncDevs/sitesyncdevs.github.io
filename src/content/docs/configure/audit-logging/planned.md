@@ -28,7 +28,7 @@ The goal is to link every sensor replacement permanently to the device it replac
 
 - **Permanent replacement record** — old and new DevEUI, tag path, date, who replaced it, reason, device profiles, and whether metadata was kept, stored in SiteSync's database and never pruned.
 - **New sensor takes over the position** — the replacement inherits the old device's tag path, so tags, trends, and alarms continue without a break.
-- **Old device archived as Replaced** — it leaves device lists and dashboards, but its record and history stay available.
+- **Old device deleted** — it leaves SiteSync and the network server, but the replacement record and its downlinks stay with the new sensor.
 - **Reason captured at the swap** — Failed, Battery, Damaged, Upgrade, or Other, plus notes.
 - **Replacement history on the device page** — the whole chain is visible from any device in it, with links to earlier devices.
 - **Combined history** — an *Include previous devices* option on the Downlinks & Changes tab merges history across the chain.

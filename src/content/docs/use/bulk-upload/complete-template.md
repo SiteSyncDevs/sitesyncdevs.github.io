@@ -56,7 +56,7 @@ A `/` in the `name` column would nest the device's tag under an unintended folde
 :::caution[Double-check dev_eui values]
 A mistyped `dev_eui` produces a device that appears in SiteSync but never connects. These are difficult to find after a large upload.
 
-A `dev_eui` that already exists in SiteSync, active or archived, can't be added again. The upload preview flags those rows and skips them. To bring back an archived device, open it and un-archive it instead of re-uploading it.
+A `dev_eui` that already exists in SiteSync, active or archived, can't be added again. The upload preview flags those rows and skips them.
 :::
 
 ## Related pages
