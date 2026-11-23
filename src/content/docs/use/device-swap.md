@@ -8,10 +8,6 @@ contentType: "task"
 lastReviewed: "2026-11-23"
 ---
 
-:::note[Availability]
-Available in the Enterprise Management app and the Field App from SiteSync 1.0.2, and generally available from [SiteSync 1.1.0](/release-notes/1-1-0/). Deleting the old sensor at the end of a swap is in builds from November 2026.
-:::
-
 When a sensor fails, runs out of battery, or is upgraded, **Swap Device** replaces it in one guided flow. The new sensor takes over the old one's position, so its tags, trends, and alarms carry on without a gap. The old sensor is then **deleted** from SiteSync and your network server.
 
 ## When to use it
@@ -27,9 +23,9 @@ Use **Swap Device** when a new physical sensor goes into the same place as an ol
 
 If the new sensor is going somewhere else, or measuring something else, add it as a new device instead.
 
-### Name devices after what they measure
+### Renaming after a swap
 
-The new sensor takes the old sensor's name and tag path. That reads correctly when a device is named after its measurement point, for example `PT-101 Pump discharge`. It reads wrongly when the name is a serial number or a DevEUI, because the new sensor would carry the old unit's identity. The DevEUI and serial number fields are where the hardware is identified.
+The new sensor takes the old sensor's name and tag path. You can rename the sensor after the swap, and [rename its tags](/use/move-rename-tags/) too if you want.
 
 ### Two ways to choose the new sensor
 
